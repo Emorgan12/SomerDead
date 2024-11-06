@@ -1,0 +1,91 @@
+{
+    "items": [
+        {
+            "id": 1,
+            "name": "Crowbar",
+            "description": "A metal crowbar, useful for prying things open.",
+            "location": "Garage"
+        },
+        {
+            "id": 2,
+            "name": "Knife",
+            "description": "A sharp knife, useful for cutting things",
+            "location": "Kitchen"
+        },
+        {
+            "id": 3,
+            "name": "Plunger",
+            "description": "A plunger, it seems to be clean.",
+            "location": "Bathroom"
+        },
+        {
+            "id": 4,
+            "name":"Rubber Duck",
+            "description":"A rubber duck, it quacks when you squeeze it.",
+            "location": "Bathroom"
+        },
+        {
+            "id": 5,
+            "name":"Teddy bear",
+            "description":"A teddy bear, it looks well loved by your daughters.",
+            "location": "Small Bedroom"
+        },
+        {
+            "id": 6,
+            "name": "Car Keys",
+            "description": "A set of car keys, for your car.",
+            "location": "Front Porch"
+        },
+        {
+            "id": 7,
+            "name": "Rope",
+            "description": "A long rope, useful for climbing or tying things together.",
+            "location": "Garage"
+        },
+        {
+            "id": 8,
+            "name": "Torch",
+            "description" : "A torch with a bright light, useful for seeing in the dark.",
+            "location": "Garage"
+        },
+        {
+            "id": 9,
+            "name": "Keycard",
+            "description": "A keycard from a soldier, could it open the millitary base?",
+            "location": "Outside"
+        }
+
+    ],
+    "locations" : [
+        {
+            "id": 1,
+            "name": "Garage",
+            "description": "A garage, cluttered and chaotic, filled with tools and boxes."
+        },
+        {
+            "id": 2,
+            "name": "Kitchen",
+            "description": "A kitchen, spacious and clean, with a fridge and a stove."
+        },
+        {
+            "id": 3,
+            "name": "Bathroom",
+            "description": "A bathroom, cold and reverberant, with a shower and a toilet."
+        },
+        {
+            "id": 4,
+            "name": "Small Bedroom",
+            "description": "A small bedroom, childish and colourful, with a bunk bed and various toys."
+        },
+        {
+            "id": 5,
+            "name": "Front Porch",
+            "description": "The front porch, welcoming and neutral, with a welcome mat and a shoe rack."
+        },
+        {
+            "id": 6,
+            "name": "Outside",
+            "description": "The outside, where the danger is."
+        }
+    ]
+}
