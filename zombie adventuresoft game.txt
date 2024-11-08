@@ -1,0 +1,35 @@
+GAME NAME: SomerDead
+
+Items:
+Crowbar (used to open barricades, if the mc attacks zombies with it, it gets stuck and it is lost, found in the garage of the house)
+ Knife (found in kitchen)
+Plunger (found in bathroom; flavour text: “It appears to be clean.”, bounces off zombie heads)
+Rubber ducky (found in bathroom, makes a quack noise)
+Teddy bear (found in small bedroom, makes noise when used)
+ Car keys (found at front door)
+Torch (Found in garage)
+Keycard (found on Dead soldier at the base.)
+
+Brandon: high end scientist, was called by the MI6 to investigate a new virus found in the freshly deforested Amazon rainforest, which is why he’s catching a flight.
+Starting area: character’s house in Yeovil (tutorial)
+After the tutorial, Brandon takes car to Yeoviliaero airport.
+(at airport) Brandon is standing in line waiting to board, when suddenly flights start getting cancelled, background is filled with voices of other people. Suddenly, all the phones start buzzing with an emergency alert, telling citizens to seek shelter and stay in their homes.
+Brandon leaves and notices zombies outside, and bolts to duck behind car. He gets in, starts the car, and takes off. He goes back to his house, where his family is hidden, and he has the option to find them or leave for the military base. 
+If Brandon chooses to find their family 
+Family in loft
+Choice to stay in house
+If Brandon doesn’t find their family:
+He just leaves without them.
+
+After that choice, MC leaves for Yeovil marsh. (In this universe, Yeovilton base is at Yeovil marsh.) Ilchester road is blocked, and he must go the rest of the way on foot. 
+He gets near the main gate of the military base and finds out that the base has been breached by the zombies. He sneaks in through the front gate and heads in. He runs across the field and ends up near one of the buildings. Suddenly, the wall of the building is blown up and soldiers are seen going forward through the hole and the building, while the character is hiding behind a statue. While the soldiers aren’t looking, he sneaks into the building and goes the way the soldiers came from. If Brandon takes a second to look around, he can see something shiny on a soldier’s body. Picking it up reveals it to be a keycard.
+After walking through multiple hallways with closed doors, he finds some stairs that lead to a lower level. He finds an unlocked door, and he sees 2 more doors at the end of the hallway. One is slightly ajar, but stuck, while the other is closed completely. If he has his family, he can pen the slightly open door with the help of his wife. Alternatively, if he’s alone, he can open it by himself with the crowbar. 
+Inside, there are 3 cryopods. Only 1 is open. Observing the wiring on the ground reveals that they lead to the locked room; the inside of which can be seen through a giant bulletproof window separating the 2 rooms. There are control panels inside of the room, supposedly used to open and activate the cryopods.
+If Brandon picked up the keycard, he could open the cryopod control room and open all the cryopods. If he brought his family with him, His wife says that she will stay behind and begs him to get into the cryopod. The player can choose if he wants to save himself or his wife.
+If Brandon saves himself, the game ends, and it is revealed his wife eventually dies to a soldier who thought she was a zombie, having left the control room after activating the cryopods and locking both doors. 
+If Brandon sacrifices himself, he can leave and go back up to the surface. With the keycard, he opens another room and finds a large supply of C4 explosives. He steals a weapon off a dead soldier and clears the facility, rigging it up with C4. He sets up his last stand, attracting a zombie horde into the facility, and blows up the C4. The cryopods remain unaffected as this section of the facility lies away from that section.
+If Brandon does not take his family, he can open the control room if he has the keycard, but the ending remains the same. He gets into the single cryopod and the game ends. It’s revealed that his wife and kids eventually get infected and die. 
+If Brandon chooses to hunker down in his house, they all eventually run out of food and water and die.
+
+Characters – MC (Brandon), wife (Eve), kid 1 (Amber, 11), kid 2 (Chelsea, 12)
+

@@ -55,37 +55,5 @@
             "location": "Outside"
         }
 
-    ],
-    "locations" : [
-        {
-            "id": 1,
-            "name": "Garage",
-            "description": "A garage, cluttered and chaotic, filled with tools and boxes."
-        },
-        {
-            "id": 2,
-            "name": "Kitchen",
-            "description": "A kitchen, spacious and clean, with a fridge and a stove."
-        },
-        {
-            "id": 3,
-            "name": "Bathroom",
-            "description": "A bathroom, cold and reverberant, with a shower and a toilet."
-        },
-        {
-            "id": 4,
-            "name": "Small Bedroom",
-            "description": "A small bedroom, childish and colourful, with a bunk bed and various toys."
-        },
-        {
-            "id": 5,
-            "name": "Front Porch",
-            "description": "The front porch, welcoming and neutral, with a welcome mat and a shoe rack."
-        },
-        {
-            "id": 6,
-            "name": "Outside",
-            "description": "The outside, where the danger is."
-        }
     ]
 }
