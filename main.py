@@ -43,39 +43,20 @@ def tutorial():
     print("You've been invited to the Amazon Rainforest as part of a research team by the MI6, you're an incredible scientist, one of the best in your field. \nA new virus has been found due to the deforestation. You're excited to go, but you're also nervous. You've never been to the Amazon before, and you've heard stories of people getting lost in the forest and never being found \nAnd this virus could turn out to be deadly.")
 
 
-    
-
-
-def airport():
-    print("You feel the cool cloth of your bedsheets against your skin as you slowly come round, your eyes open and your sight is blurry but you can just about make out your room, you look to your right and see your wife asleep gently snoring. you say your goodbyes and kiss her on the forhead   ")
-
-def house():
-    #return True if staying else return False
-    pass
-
-def road_block():
-    pass
-
-def fields():
-    pass
-
-
-
-
-
 
 def main():
     title()
     tutorial()
     '''
-    airport()
-    stay = house()
+    family = airport()
+    if family:
+        stay = house() 
     if stay:
         exit()
-    road_block()
-    fields()
-    mil_base_outskirts()
-    mil_base()
+    road_block(family)
+    fields(family)
+    mil_base_outskirts(family)
+    mil_base(family)
     '''
     
 if __name__ == "__main__":
