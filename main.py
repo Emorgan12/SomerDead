@@ -1,6 +1,8 @@
 import json
 from time import sleep
 import os
+import roadblock+fields
+
 
 items = open('items.json', 'r')
 items = json.load(items)
