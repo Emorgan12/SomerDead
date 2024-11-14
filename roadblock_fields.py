@@ -42,6 +42,21 @@ def fields(family):
     system('cls')
     print("You've not been walking long, maybe 15 minutes, when you come across a field.")
     sleep(2)
+    print("The field is bright green with specs of other colours. It's serene and calm.")
+    sleep(1)
+    print("There's no one in the field.")
+    sleep(2)
+    if family:
+        print("Just you, and your family.")
+    else:
+        print("It's just you, walking alone.")
+    sleep(2)
+    system('cls')
+    print("There's a few birds, but they're dead silent.")
+    sleep(2)
+    print("It's as if they're aware and of the danger and they're scared.")
+    sleep(2)
+    system('cls')
     if family:
         print("Despite the fact you've not been walking long, Chelsea and Amber are complaining their legs hurt.")
         sleep(2)
@@ -59,6 +74,56 @@ def fields(family):
     sleep(2)
     system('cls')
     print("The fields feel safe, but you must keep your guard up, nowhere is safe when there's these creatures flooding the streets")
+    sleep(2)
+    print("Anything could appear, you have to stay aware of your surroundings")
+    sleep(2)
+    system('cls')
+    print("You come accross a massive patch of mud.")
+    sleep(2)
+    print("There's a path that goes around, but that could add another 15-20 minutes to your journey")
+    sleep(1)
+    print("You have to decide whether to go around it or go through it.")
+    sleep(2)
+    if family:
+        print("Both Chelsea and Amber are urging you to go around,")
+        sleep(1)
+        print("but your wife trusts your decision will be best.")
+        sleep(2)
+    system('cls')
+    while True:
+        print("Will you go through the mud?")
+        sleep(0.5)
+        ans = input("Y- Yes \nN- No \n\n").upper()
+        if ans == "Y":
+            system('cls')
+            print("You go through the mud")
+            sleep(2)
+            print("It's deeper than you thought.")
+            sleep(2)
+            print("Your entire feet and ankles are submerged.")
+            sleep(2)
+            if family:
+                print("Not being very tall, it comes up halfway up the bottom of your daughter's legs")
+                sleep(2)
+                system('cls')
+                print("They are *not* happy about it.")
+            print("You get through the mud but you are now covered in mud.")
+            break
+        elif ans == "N":
+            system('cls')
+            print("You go around the mud.")
+            if family:
+                print("Amber and Chelsea's mood seems to have lifted")
+                print("They really didn't want to go through that mud")
+            print("You may have stayed clean and dry but added 20 minutes to your journey")
+            break
+        else:
+            print("\nInvalid Input")
+            print()
+            sleep(1)
+            system('cls')
+    print("You continue walking for about 30 minutes until you spot your destination up ahead")
 
-road_block(True)
-fields(True)
+
+road_block(False)
+fields(False)

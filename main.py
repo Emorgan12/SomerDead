@@ -1,9 +1,9 @@
 import json
 from time import sleep
 import os
-import roadblock_fields
-import alexs_epic_storytelling
-import airport_house
+from roadblock_fields import road_block, fields
+from alexs_epic_storytelling import mil_base_outskirts
+from airport_and_house import airport, house
 
 
 items = open('items.json', 'r')
@@ -51,7 +51,6 @@ def tutorial():
 def main():
     title()
     tutorial()
-    '''
     family = airport()
     if family:
         stay = house() 
@@ -60,8 +59,7 @@ def main():
     road_block(family)
     fields(family)
     mil_base_outskirts(family)
-    mil_base(family)
-    '''
+    #mil_base(family)
     
 if __name__ == "__main__":
     main()
