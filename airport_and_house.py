@@ -1,3 +1,4 @@
+
 def airport():
     print("You feel the cool cloth of your bedsheets against your skin as you slowly come round, your eyes open and your sight is blurry but you can just about make out your room, you look to your right and see your wife asleep gently snoring.\nYou say your goodbyes and kiss her on the forehead before making your way downstairs. The morning light shining through, the beautiful colours of yellow and orange lighting the living room with a hint of red almost seeping through tainting the room.")
     print("You gather your things and get ready to head out the door before remembering you might need your car keys. Yeovils airport has never been the highest of quality but it does have the benefit of being close to home, the rundown walls and old technology, smells damp and there are signs of water damage.")
@@ -14,17 +15,25 @@ def airport():
 
 
 def house():
-    print("Upon reaching the house you recieve a notification, it reads 'To all citizens, please remain calm and stay inside of your houses, lock all your doors and close your windows, This is not a test. if you encounter someone who is acting off or seemingly agressive please do your best to avoid them.")
-    print("the realisation of whats really going on begins to kick in, and a thought crosses your mind, what if you didnt go get your family? what if they had been attacked? what if they were aggressive and tried to harm you?  do you want to take that risk?")
-    print("\n")
-    print("Look for your family (1)")
-    print("Leave them (2)")
-    hawk2a = input("What do you do? ")
-    if hawk2a == "1":
-        return True
+    while True:
+        print("Upon reaching the house you recieve a notification, it reads 'To all citizens, please remain calm and stay inside of your houses, lock all your doors and close your windows, This is not a test. if you encounter someone who is acting off or seemingly agressive please do your best to avoid them.")
+        print("the realisation of whats really going on begins to kick in, and a thought crosses your mind, what if you didnt go get your family? what if they had been attacked? what if they were aggressive and tried to harm you?  do you want to take that risk?")
+        print("\n")
+        print("go find your family (1)")
+        print("Abandon them (2)")
+        hawk2a = input("What do you do?")
+        if hawk2a == "1":
+            print("You think to yourself why would you even question that, of course you need to save your family. You begin to drive towards your house, praying that your family is safe and not harmed at all. When you arrive at the house it seems empty, almost eerily quiet.\nAs you enter the house the only sound you can hear is the slow breathing coming from your own body, with no sign of your family you choose to have a look for them, maybe they are hiding? You see 3 doors in front of you, the kitchen, living room and the toilet.\nWhile there are 3 doors in front of you, theres also the stairs that lead up, what do you pick?")
+            hawk3a = input("What do you do?")
+            print("1, Open the kitchen door.")
+            print("2, Open the living room door.")
+            print("3, Open the toilet door")
+            print("Go up the stairs")
+
+            return True
     
-    elif hawk2a == "2":
-        return False
+        elif hawk2a == "2":
+            return False
 
 
 
@@ -37,3 +46,5 @@ def main():
         exit() 
 if __name__ == "__main__":
     main()
+
+    
