@@ -1,59 +1,57 @@
-{
-    "items": [
+   [
         {
-            "id": 1,
+            "id": 0,
             "name": "Crowbar",
             "description": "A metal crowbar, useful for prying things open.",
             "location": "Garage"
         },
         {
-            "id": 2,
+            "id": 1,
             "name": "Knife",
             "description": "A sharp knife, useful for cutting things",
             "location": "Kitchen"
         },
         {
-            "id": 3,
+            "id": 2,
             "name": "Plunger",
             "description": "A plunger, it seems to be clean.",
             "location": "Bathroom"
         },
         {
-            "id": 4,
+            "id": 3,
             "name":"Rubber Duck",
             "description":"A rubber duck, it quacks when you squeeze it.",
             "location": "Bathroom"
         },
         {
-            "id": 5,
+            "id": 4,
             "name":"Teddy bear",
             "description":"A teddy bear, it looks well loved by your daughters.",
             "location": "Small Bedroom"
         },
         {
-            "id": 6,
+            "id": 5,
             "name": "Car Keys",
             "description": "A set of car keys, for your car.",
             "location": "Front Porch"
         },
         {
-            "id": 7,
+            "id": 6,
             "name": "Rope",
             "description": "A long rope, useful for climbing or tying things together.",
             "location": "Garage"
         },
         {
-            "id": 8,
+            "id": 7,
             "name": "Torch",
             "description" : "A torch with a bright light, useful for seeing in the dark.",
             "location": "Garage"
         },
         {
-            "id": 9,
+            "id": 8,
             "name": "Keycard",
             "description": "A keycard from a soldier, could it open the millitary base?",
             "location": "Outside"
         }
 
     ]
-}
