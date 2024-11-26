@@ -61,33 +61,51 @@ def house():
                 # Add progression here
 
             elif ans1 == "4":
+                print("You decide to go upstairs. The stairs creak as you ascend, and your heart races with each step.")
                 while True:
-                    print("You decide to go upstairs. The stairs creak as you ascend, and your heart races with each step.")
                     print("You reach the top, where all the doors are closed. What do you do?")
                     print("1. Open Amber's door")
                     print("2. Open Chelsea's door")
                     print("3. Open your bedroom door")
                     print("4. Open the loft hatch")
+                    print("5, Go back downstairs")
 
                     ans2 = input("What do you do? ")
                 
                     if ans2 == "1":
-                        print("You open Amber's door and feel a strange sense of dread. The room is quiet. What do you find?")
-                        # Add progression here
+                        print("You open Amber's door and feel a strange sense of dread. The room is quiet. The pink vibrant walls feeling seamingly dull, your family isnt here.")
+                        continue
 
                     elif ans2 == "2":
-                        print("You open Chelsea's door. It looks untouched, but the atmosphere feels thick. Her toys and books are lying scattered on the floor, nothing unusual here.")
+                        print("You open Chelsea's door. It looks untouched, but the atmosphere feels thick. Her toys and books are lying scattered on the floor, nothing unusual here. Her bed still ruffled from this morning. ")
                         continue
-                        # Add progression here
+                        
 
                     elif ans2 == "3":
-                        print("You open your bedroom door. Everything seems fine, but you still feel uneasy.")
+                        print("You open your bedroom door. Everything seems fine, but you still feel uneasy. Your wife is nowhere to be seen and it doesnt look like anythings changed")
                         # Add progression here
 
                     elif ans2 == "4":
-                        print("You open the loft hatch. The stale air and chill run down your spine as you peer inside.")
+                        print("You open the loft hatch. The stale air and chill run down your spine as you peer inside. the dark cold loft stares back at you, you swear you see something move in the corner, it seems to be getting closer to you. The panick sets in and you turn on your phones flashlight, just to see a face staring back at you,  at first you jump and are prepared to attack before hearing your wifes soft voice.")
+                        print("your panick begins to become relief as you see your whole family up there. you climb up into the loft and ponder your options, you clould either stay up in the loft and hope for the best, or go out and try and find help.")
+
+                        print("1, Stay")
+                        print("2, try to find help")
+                        ans3 = input("What do you do?")
+
+                        if ans3 == "1":
+                            print("You decide to stay in the loft, hoping that you're safe up there with your family. You huddle together, waiting for the night to pass.")
+                        elif ans3 == "2":
+                            print("You decide to leave the loft and try to find help. You carefully climb back down and prepare to search for safety.")
+                        else:
+                            print("Invalid choice. Please enter 1 or 2.")
+
                         # Add progression here
 
+                    elif ans2 == "5":
+                        continue        
+
+                    
                     else:
                         print("Invalid choice. Try again.")
                         continue
