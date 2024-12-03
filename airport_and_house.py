@@ -32,7 +32,7 @@ def house():
             print("\nWhat do you pick?")
             print("1. Open the kitchen door")
             print("2. Open the living room door")
-            print("3. Open the toilet door")
+            print("3. Open the Garage door")
             print("4. Go up the stairs")
             ans1 = input("What do you do? ")
 
@@ -45,9 +45,9 @@ def house():
                 if ans2 == "1":
                     inventory.append(2)  # Add the knife to inventory
                     print(items[1]["description"])
-                    print("You feel the cold steel of the handle as you put it away.")
+                    print("You feel the cold steel of the handle as you put it away.you check around the kitchen, looking under the tables making sure to look in every nook and cranny. They are not here. You return back to the hallway, knife sitting in your pocket")
                 elif ans2 == "2":
-                    print("You leave the knife and continue searching.")
+                    print("You leave the knife and continue searching.you check around the kitchen, looking under the tables making sure to look in every nook and cranny. They are not here. You return back to the hallway")
                 else:
                     print("Invalid choice. Try again.")
                     continue
@@ -57,7 +57,8 @@ def house():
                 # Add progression here
 
             elif ans1 == "3":
-                print("You open the toilet door and find it locked. You wonder if something is hidden inside.")
+                print("You open the garage door and enter the darkness, you feel the familiar placing of the lightswitch and illuminate the area, the light shining on your workpace.")
+                print("you notice that your tools are still here and think to yourself that they could come in handy. ")
                 # Add progression here
 
             elif ans1 == "4":
@@ -87,16 +88,16 @@ def house():
 
                     elif ans2 == "4":
                         print("You open the loft hatch. The stale air and chill run down your spine as you peer inside. the dark cold loft stares back at you, you swear you see something move in the corner, it seems to be getting closer to you. The panick sets in and you turn on your phones flashlight, just to see a face staring back at you,  at first you jump and are prepared to attack before hearing your wifes soft voice.")
-                        print("your panick begins to become relief as you see your whole family up there. you climb up into the loft and ponder your options, you clould either stay up in the loft and hope for the best, or go out and try and find help.")
+                        print("your panick begins to become relief as you see your whole family up there. you climb up into the loft and ponder your options, you clould either stay up in the loft and hope for the best, or go out and try and find help, maybe the government have a safe zone.")
 
-                        print("1, Stay")
-                        print("2, try to find help")
+                        print("1, Stay with your family.")
+                        print("2, try to find help with your family")
                         ans3 = input("What do you do?")
 
                         if ans3 == "1":
-                            print("You decide to stay in the loft, hoping that you're safe up there with your family. You huddle together, waiting for the night to pass.")
+                            print("You decide to stay in the loft, hoping that you're safe up there with your family. You huddle together, waiting for the night to pass. you awake suddenly as you hear a crash coming from inside the house, deeming it too risky to go down you lock the hatch and tell your family never to go down there.\n As the days go past, the girls keep complaining that their stomachs hurt and that they are hungry, begging you to please get food, you reasure them that help will be here soon and that itll all be okay.\n you look to your wife to see how she is, and she is just sat in the corner, her once beautiful eyes blankly staring into the ground.\n \n You wake up feeling weak the next day, knowing that you wont live much longer, and you begin to smell something that feels off, you turn to your wife and notice her bony figure,\n she never did eat as much as you but you could tell that she wasnt with you anymore, the pain of starvation was more of an annoyance to you, knowing that your family were dying hurt tons more.\n the girls led down on the ground occasionally letting out a sniffle. at least it reasured you that they were okay for now. praying that someone would rescue you, all the while reassuring your girls that mum had just gone to a better place and they would all be seeing her soon.\n As the day went on, you knew that you wouldnt survive the night, and so, you huddled close with your girls holding them both close and looking at their bony faces for the last time, and your eyes start to fade, joining your wife and daughters in peace.")
                         elif ans3 == "2":
-                            print("You decide to leave the loft and try to find help. You carefully climb back down and prepare to search for safety.")
+                            print("You decide to leave the loft and try to find help. You carefully climb back down and help your family down the ladder , beggining to prepare to search for safety.")
                         else:
                             print("Invalid choice. Please enter 1 or 2.")
 
@@ -106,6 +107,7 @@ def house():
                         continue        
 
                     
+
                     else:
                         print("Invalid choice. Try again.")
                         continue
