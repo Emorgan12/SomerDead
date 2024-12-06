@@ -3,10 +3,11 @@ import time
 
 #TO DO: 
 
-inventory = [1, 9]
-has_wife = True
+inventory = [0, 8]
+has_family = True
 
 
+#This function is fully completed. The keycard is obtained in this function. This function checks the inventory for the crowbar. This function checks if the character has his family with him by checking the "has_family" variable.
 def mil_base_outskirts():
 
     x = True
@@ -17,7 +18,7 @@ def mil_base_outskirts():
         
         if ans == "Search his body.":
             print("A fowl stench assaults your nose. From his body, you obtain a keycard. Something bugs you, however: The guard has only died recently. How has his body rotten this badly?\nYou brush it off and move on. As you leave, you feel like you saw the body twitch.")
-            inventory.append(9)
+            inventory.append(8)
             x = False
         
         elif ans == "Continue forward and ignore it.":
@@ -37,10 +38,10 @@ def mil_base_outskirts():
     
     print("\nTry opening the door by yourself.")
     
-    if has_wife == True:
+    if has_family == True:
         print("\nGet your wife to help you open the door.")
     
-    elif 1 in inventory:
+    elif 0 in inventory:
         print("\nTry prying it open with your trusty crowbar.")
     
     ans = input("\n\n")
@@ -50,7 +51,7 @@ def mil_base_outskirts():
     
         print("\nTry opening the door by yourself.")
         
-        if has_wife == True:
+        if has_family == True:
             print("\nGet your wife to help you open the door.")
         
         elif 1 in inventory:
@@ -61,7 +62,7 @@ def mil_base_outskirts():
         if ans == "Try opening the door by yourself.":
             print("\nYou try with all your might to open the door, but it just will not budge. Skipping the gym has come back to bite you.")
 
-            if has_wife == False and 1 not in inventory:
+            if has_family == False and 1 not in inventory:
                 print("\nAnd, with no other option, you have no choice but to go back. However, going up the stairs reveals that an explosion has caused rubble to block the stairway. You are now completely isolated from civilization.\nYou eventually die, hungry and alone. Your family would also perish by themselves.\n\nThe game will now close.")
                 time.sleep(15)
                 quit()
@@ -82,10 +83,10 @@ def mil_base_outskirts():
 
     print("The room is very cold. You see 3 chambers, one of which is open, with a warm green light shining inside of it. The other 2 are closed, lit up by a red light. You use your sci-fi knowledge to deduct that they are probably cryo-pods. You do not see any control panels in sight. However, you do see wires running from the cryo pods to another room that you can see into through a glass pane. The glass appears bulletproof, so you doubt you would have any luck breaking through it. You suddenly remember the other door. You go back outside the give the other door a closer look. You notice a keycard reader.")     
 
-    if 9 in inventory:
+    if 8 in inventory:
         print("You suddenly remember the key card you picked up off of the dead guard. You try it on the keycard reader. You hear 2 short beeps, accompanied by a green LED turning on, and the door opens. Inside, you see a control panel with controls to the cryo pods.")
         
-        if has_wife == True:
+        if has_family == True:
             x = True
             print("There are 4 of you and only 1 operational cryopod, so obviously, you enable the other ones. Now you face a different conundrum: There are 3 cryo-pods, so who's going to be left behind?\nYou return to the room, all cryo-pods operational, and explain the situation. Your 2 kids are already in the pods.\nYour wife says she is willing to sacrifice herself. What do you do?")
             
@@ -115,12 +116,14 @@ def mil_base_outskirts():
     
     else:
         
-        if has_wife == False:
-            print("The door will not open. You return to the single operational cryo-pod and ")
+        if has_family == False:
+            print("The door will not open. You return to the single operational cryo-pod and hop in. Activating it, your conciousness is starting to fade. Your last thoughts are about your family.\n\nYou think back to the house and feel guilt over leaving your family behind, now knowing that you could save them.\n\nYou truly are a monster. Eventually, you are woken up by MI6 agents. Your contacts prove valuable.\nIt has been 10 years, and the apocalypse has blown over. The zombies decomposed to the point of collapse, causing all infected to die off.\n\nYou return to your job as a biologist, but life feels empty, because your family has disappeared. Nobody to come home to. You survived, but at what cost?\n\nThe game will now close.")
+            time.sleep(15)
+            quit()
         print("You do not have a keycard that would open the door. Maybe you should have checked the dead guard's body, back at the entrance.\nYou return back to the cryo-pod room. You face a conundrum: There are 4 of you, and only 1 cryo-pod. After a long debate, you realize that the cryo-pod is spatious enough to fit all 4 of you.\nYou all get into the cryo-pod and activate it, hoping to wake up in a better place. Too bad you did not read the warning on the side of the machine, saying that the machine overloads when more than 1 person get into the pod...\n\nThough, you all ended up in a better place, at least when compared to the real world. The machine exploded and the insides of the chamber were covered by a layer of red.\n\nThe game will now close.")
         time.sleep(15)
         quit()
-        #family dies at cyo-pod ending
+        #family dies at cryo-pod ending
     
 
 
