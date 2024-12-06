@@ -23,7 +23,7 @@ def house():
     print("The realization of what's going on begins to kick in, and a thought crosses your mind. What if you didn't go get your family? What if they had been attacked? What if they were aggressive?")
     print("\n1. Go find your family")
     print("2. Abandon them")
-    ans = input("What do you do? ")
+    ans = input("What do you do?")
 
     if ans == "1":
         print("You decide to find your family and drive toward the house, praying that they're safe.")
@@ -38,6 +38,7 @@ def house():
             ans1 = input("What do you do? ")
 
             if ans1 == "1":
+                if inventory 
                 print("You open the kitchen door to find it barren. There's a kitchen knife on the counter. Should you take it?")
                 print("1. Take the knife")
                 print("2. Leave the knife")
