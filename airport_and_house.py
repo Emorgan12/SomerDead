@@ -2,6 +2,7 @@ import json
 inventory = [1, 9]
 items = open('items.json', 'r')
 items = json.load(items)
+has_family = False
 
 def airport():
     print("You feel the cool cloth of your bedsheets against your skin as you slowly come round, your eyes open and your sight is blurry but you can just about make out your room, you look to your right and see your wife asleep gently snoring.\nYou say your goodbyes and kiss her on the forehead before making your way downstairs. The morning light shining through, the beautiful colours of yellow and orange lighting the living room with a hint of red almost seeping through tainting the room.")
@@ -43,7 +44,7 @@ def house():
                 ans2 = input("What do you do? ")
 
                 if ans2 == "1":
-                    inventory.append(2)  # Add the knife to inventory
+                    inventory.append(1)  # Add the knife to inventory
                     print(items[1]["description"])
                     print("You feel the cold steel of the handle as you put it away.you check around the kitchen, looking under the tables making sure to look in every nook and cranny. They are not here. You return back to the hallway, knife sitting in your pocket")
                 elif ans2 == "2":
@@ -58,15 +59,55 @@ def house():
 
             elif ans1 == "3":
                 print("You open the garage door and enter the darkness, you feel the familiar placing of the lightswitch and illuminate the area, the light shining on your workpace.")
-                print("you notice that your tools are still here and think to yourself that they could come in handy. ")
-                # Add progression here
+                print("you notice that your tools are still here and think to yourself that they could come in handy. You at first see your crowbar, an effective tool but also a deadly weapon if used right, Do you take it?")
+                print("1. Take the crowbar")
+                print("2. Leave the crowbar")
+                ans5 = input("What do you do? ")
+
+                if ans5 == "1":
+                    inventory.append(0)
+                    print("You take the crowbar and continue searching.")
+                    pass
+
+                elif ans5 == "2":
+                    print("you leave the crowbar and continue searching.")
+                    pass
+                
+                print("\nYou notice that your rope is still here from when you were planning to make a rope swing for your girls. it was meant to be a christmas present for them. Do you really want to take it? ")
+                print("1. Take the Rope")
+                print("2. Leave the Rope, maybe you can still make their present.")
+                ans7 = input("What do you do? ")
+
+                if ans7 == "1":
+                    inventory.append(6)
+                    print("You take the Rope and continue searching.")
+                    pass
+
+                elif ans7 == "2":
+                    print("you leave the Rope and continue searching.")
+                    pass
+
+                print("\nAnd finally you see your trusty torch, a hand crank on the side allows for unlimited use, could be useful for dark areas or the night. Do you take it?")
+                print("1. Take the Torch")
+                print("2. Leave the Torch, How will you see in the dark?.")
+                ans6 = input("What do you do? ")
+
+                if ans6 == "1":
+                    inventory.append(6)
+                    print("You take the Torch and head back to the corridoor")
+                    continue
+
+                elif ans6 == "2":
+                    print("you leave the Torch and head back to the corridoor.")
+                    continue
+
 
             elif ans1 == "4":
                 print("You decide to go upstairs. The stairs creak as you ascend, and your heart races with each step.")
                 while True:
                     print("You reach the top, where all the doors are closed. What do you do?")
-                    print("1. Open Amber's door")
-                    print("2. Open Chelsea's door")
+                    print("1. Open the girls door")
+                    print("2. Open The bathroom door")
                     print("3. Open your bedroom door")
                     print("4. Open the loft hatch")
                     print("5, Go back downstairs")
@@ -74,12 +115,52 @@ def house():
                     ans2 = input("What do you do? ")
                 
                     if ans2 == "1":
-                        print("You open Amber's door and feel a strange sense of dread. The room is quiet. The pink vibrant walls feeling seamingly dull, your family isnt here.")
+                        print("You open the girls door and feel a strange sense of dread. The room is quiet. The pink vibrant walls feeling seamingly dull, their toys and books lay scattered on the floor.\n You take a few steps into the room and check the girls closet hoping to find one of them hiding. No Luck. your family isnt here. You return back to the to the top of the stairs.")
                         continue
 
                     elif ans2 == "2":
-                        print("You open Chelsea's door. It looks untouched, but the atmosphere feels thick. Her toys and books are lying scattered on the floor, nothing unusual here. Her bed still ruffled from this morning. ")
-                        continue
+                        while True:
+                            print("You open the bathroom door. It looks untouched, but the atmosphere feels thick. theres still water in the bathtub, nothing unusual here. however you notice a rubber duck, bouncing off the walls of the tub. Maybe it could be useful?")
+                            print("Take the duck?")
+                            print("1, Yes")
+                            print("2, No")
+
+                            ans4 = input()
+
+                            if ans4 =="1":
+                                inventory.append(3)
+                                break
+
+                            elif ans4 =="2":
+                                break
+
+                            else:
+                                print("Invalid choice. Please enter 1 or 2.")
+
+
+                        print("on closer inspection of the bathroom you also happen to notice that the clean plunger is still sat in the corner, perhaps this could be of use?")
+                        print("Take the clean plunger?")
+                        print("1, Yes")
+                        print("2, No")
+
+                        ans4 = input()
+
+                        if ans4 =="1":
+                            inventory.append(2)
+                            print("deciding that you had found everything needed from the bathroom you return to the stairs.")
+                            break
+
+                        elif ans4 =="2":
+                            print("deciding that you had found everything needed from the bathroom you return to the stairs.")
+                            break
+
+                        else:
+                            print("Invalid choice. Please enter 1 or 2.")
+
+                        
+
+
+                        
                         
 
                     elif ans2 == "3":
@@ -98,13 +179,14 @@ def house():
                             print("You decide to stay in the loft, hoping that you're safe up there with your family. You huddle together, waiting for the night to pass. you awake suddenly as you hear a crash coming from inside the house, deeming it too risky to go down you lock the hatch and tell your family never to go down there.\n As the days go past, the girls keep complaining that their stomachs hurt and that they are hungry, begging you to please get food, you reasure them that help will be here soon and that itll all be okay.\n you look to your wife to see how she is, and she is just sat in the corner, her once beautiful eyes blankly staring into the ground.\n \n You wake up feeling weak the next day, knowing that you wont live much longer, and you begin to smell something that feels off, you turn to your wife and notice her bony figure,\n she never did eat as much as you but you could tell that she wasnt with you anymore, the pain of starvation was more of an annoyance to you, knowing that your family were dying hurt tons more.\n the girls led down on the ground occasionally letting out a sniffle. at least it reasured you that they were okay for now. praying that someone would rescue you, all the while reassuring your girls that mum had just gone to a better place and they would all be seeing her soon.\n As the day went on, you knew that you wouldnt survive the night, and so, you huddled close with your girls holding them both close and looking at their bony faces for the last time, and your eyes start to fade, joining your wife and daughters in peace.")
                         elif ans3 == "2":
                             print("You decide to leave the loft and try to find help. You carefully climb back down and help your family down the ladder , beggining to prepare to search for safety.")
+                            has_family = True
                         else:
                             print("Invalid choice. Please enter 1 or 2.")
 
                         # Add progression here
 
                     elif ans2 == "5":
-                        continue        
+                        pass        
 
                     
 
