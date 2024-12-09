@@ -33,8 +33,8 @@ def item_drop():
 
     print("Your inventory is full, please choose an item to drop:")
     for item in inventory:
-        print(str(items[item]["id"])+items[item]["name"])
-    ans = input()
+        print(str(items[item]+ ' ' + ["id"])+items[item]["name"])
+    ans = input('\n')
     if ans in inventory:
         print("Dropped" + items[ans]["name"])
         return ans
@@ -238,7 +238,7 @@ def loft():
 
     print("1, Stay with your family.")
     print("2, leave with your family and try to find help")
-    ans3 = input("What do you do?")
+    ans3 = input("What do you do? ")
 
     if ans3 == "1":
         print("You decide to stay in the loft, hoping that you're safe up there with your family. You huddle together, waiting for the night to pass. you awake suddenly as you hear a crash coming from inside the house, deeming it too risky to go down you lock the hatch and tell your family never to go down there.\n As the days go past, the girls keep complaining that their stomachs hurt and that they are hungry, begging you to please get food, you reasure them that help will be here soon and that itll all be okay.\n you look to your wife to see how she is, and she is just sat in the corner, her once beautiful eyes blankly staring into the ground.\n \n You wake up feeling weak the next day, knowing that you wont live much longer, and you begin to smell something that feels off, you turn to your wife and notice her bony figure,\n she never did eat as much as you but you could tell that she wasnt with you anymore, the pain of starvation was more of an annoyance to you, knowing that your family were dying hurt tons more.\n the girls laid down on the ground occasionally letting out a sniffle. at least it reasured you that they were okay for now. praying that someone would rescue you, all the while reassuring your girls that mum had just gone to a better place and they would all be seeing her soon.\n As the day went on, you knew that you wouldn't survive the night, and so, you huddled close with your girls holding them both close and looking at their bony faces for the last time, and your eyes start to fade, joining your wife and daughters in peace.")
@@ -282,7 +282,7 @@ def airport():
     while True:
         print("\n1. Go find your family")
         print("2. Abandon them")
-        ans = input("What do you do?")
+        ans = input("What do you do? ")
 
         if ans == "1":
             return True
