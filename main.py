@@ -41,6 +41,7 @@ def item_drop():
     else:
         item_drop()
 def title():
+    system('cls')
     print("░▒▓███████▓▒░░▒▓██████▓▒░░▒▓██████████████▓▒░░▒▓████████▓▒░▒▓███████▓▒░░▒▓███████▓▒░░▒▓████████▓▒░░▒▓██████▓▒░░▒▓███████▓▒░  ")
     print("░▒▓█▓▒░      ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░      ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░      ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░ ")
     print("░▒▓█▓▒░      ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░      ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░      ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░ ")
@@ -101,6 +102,7 @@ def kitchen():
                 break
             elif ans2 == "2":
                 print("You leave the knife and continue searching.you check around the kitchen, looking under the tables making sure to look in every nook and cranny. They are not here. You return back to the hallway")
+                break
             else:
                 print("Invalid choice. Try again.")
                 
@@ -560,7 +562,6 @@ def main():
     title()
     tutorial()
     family = airport()
-    family = True
     if family:
         stay, inventory = house() 
         if stay:
