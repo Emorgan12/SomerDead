@@ -15,17 +15,17 @@ def pizza_guy():
     print("Or you can ignore the door (2)")
     answer = input("What do you do? ")
     if answer == "1":
-        system('cls')
+        system('clear')
         print("You open the door to see who it is. It's just the pizza delivery guy. You take the pizza and pay him. You close the door and go back to the living room.")
         print("You sit back down on the couch and continue watching your daughters play.")
         return
     elif answer == "2":
-        system('cls')
+        system('clear')
         print("You ignore the door and continue watching your daughters play. The knocking continues. You decide to ignore it and continue watching your daughters play.")
         print("There's a shout, it's the pizza delivery guy, announcing he's here")
         pizza_guy()
     else:
-        system('cls')
+        system('clear')
         print("Invalid input. Please try again.")
         pizza_guy()
 
@@ -53,13 +53,13 @@ def tutorial():
     print("You're home, with your family. Your daughters, Chelsea and Amber are playing on the floor, you and your wife, Eve, are sitting on the couch, watching them play. You hear a knock on the door.")
     pizza_guy()
     sleep(3)
-    system('cls')
+    system('clear')
     print("The evening continues as it usually would on a Friday, with you and your family enjoying each other's company. You decide to go to bed early, as you have a long day ahead of you tomorrow.")
     sleep(3)
-    system('cls')
+    system('clear')
     print("You've been invited to the Amazon Rainforest as part of a research team by the MI6, you're an incredible scientist, one of the best in your field. \nA new virus has been found due to the deforestation. You're excited to go, but you're also nervous. You've never been to the Amazon before, and you've heard stories of people getting lost in the forest and never being found \nAnd this virus could turn out to be deadly.")
     sleep(10)
-    system('cls')
+    system('clear')
 def downstairs():
     print("The house is eerily quiet. No sign of your family. You start to look around. There are 3 doors: kitchen, living room, and toilet. Also, stairs lead up.")
     
@@ -254,29 +254,29 @@ def airport():
     time.sleep(5)
     print("The morning light shining through, the beautiful colours of yellow and orange lighting the living room with a hint of red almost seeping through tainting the room.")
     time.sleep(5)
-    system('cls')
+    system('clear')
     print("You gather your things and get ready to head out the door before remembering you might need your car keys. Yeovil's airport has never been the highest of quality but it does have the benefit of being close to home, the rundown walls and old technology, smells damp and there are signs of water damage.")
     time.sleep(7)
-    system('cls')
+    system('clear')
     print("You sit on one of the rusty old seats and it almost sounds like its screaming for help from the pressure, although you knew it was going to happen, something felt off, you have a bad feeling about something but cant quite pin what it is.\n Deciding its just nerves about the flight you opt to ignore it, keeping your eyes on the display, watching all the flights including your own. You notice that a flight gets cancelled and then another.")
     time.sleep(10)
-    system('cls')
+    system('clear')
     print("A few minutes go by and then your flight gets cancelled, The nerves setting in doesn't help and so you approach the desk and ask whats going on, only to be told that they cant tell you. a gut feeling sinks in and you get the urge to leave.")
     time.sleep(10)
-    system('cls')
+    system('clear')
     print("You choose to ignore the feeling and once again take your seat waiting patiently. the longer you wait the more you see other flights being cancelled.\n \n A lot of people begin to swarm around the front desk shouting questions, deciding youd come back later for the flight in the evening you stand up and grab your suitcase.")
     time.sleep(5)
     print("as you turn your back to the swarm of people you cant help but notice a few of them are attacking each other, this isnt an uncommon thing to happen but they seem to be getting very agressive. as you take your first step onto the carpark outside a man sprints past you knocking you to the ground.")
     time.sleep(12)
-    system('cls')
+    system('clear')
     print("getting back up you see the same person who just ran past turning the corner, his red jumper was the only thing you could notice before he was gone. brushing yourself of, dazed and confused you pick up your suitcase.")
     time.sleep(5)
     print("You notice that a lot of people are hurrying to their cars, scrambling to open their doors, a few of them bleeding. You think there could have been an accident, maybe one of the old roofs collapsed? You get into your car, still confused about whats going on, and start to head home")
     time.sleep(10)
-    system('cls')
+    system('clear')
     print("Fearing for the worst you make your way home, driving past houses that are eerily quiet, determined to get home to your family to make sure they are okay.")
     time.sleep(10)
-    system('cls')
+    system('clear')
     print("Upon reaching the house, you receive a notification. It reads: 'To all citizens, please remain calm and stay inside your houses, lock all your doors and close your windows. This is not a test...'")
     print("The realization of what's going on begins to kick in, and a thought crosses your mind. What if you didn't go get your family? What if they had been attacked? What if they were aggressive?")
     while True:
@@ -297,7 +297,7 @@ def house():
     return downstairs()
 
 def road_block(family):
-    system('cls')
+    system('clear')
     print("You leave your house and jump in the car.")
     sleep(2)
     if family:
@@ -313,12 +313,12 @@ def road_block(family):
     sleep(2)
     print("Before getting out the car, you try to formulate a plan.")
     sleep(2)
-    system('cls')
+    system('clear')
     print("There's a military base nearby, you could try to get there.")
     sleep(2)
     print("It won't be easy, but it's the best option for safety.")
     sleep(2)
-    system('cls')
+    system('clear')
     if family:
         print("You continue, your wife holding Chelsea's hand and you holding Amber's.")
         sleep(2)
@@ -328,13 +328,13 @@ def road_block(family):
     else:
         print("You continue, alone, worry for your family in the back of your mind")
         sleep(4)
-        system('cls')
+        system('clear')
         print("But it's for the best, right?")
     sleep(2)
 
 
 def fields(family):
-    system('cls')
+    system('clear')
     print("You've not been walking long, maybe 15 minutes, when you come across a field.")
     sleep(2)
     print("The field is bright green with specs of other colours. It's serene and calm.")
@@ -346,18 +346,18 @@ def fields(family):
     else:
         print("It's just you, walking alone.")
     sleep(2)
-    system('cls')
+    system('clear')
     print("There's a few birds, but they're dead silent.")
     sleep(2)
     print("It's as if they're aware and of the danger and they're scared.")
     sleep(2)
-    system('cls')
+    system('clear')
     if family:
         print("Despite the fact you've not been walking long, Chelsea and Amber are complaining their legs hurt.")
         sleep(2)
         print("You decide to take a break, and sit down in the field, but not for long.")
         sleep(2)
-        system('cls')
+        system('clear')
         print("You're sat there for around 2 minutes, quiet talking in an attempt to calm them down.")
         sleep(2)
         print("You're scared, but you know everything will be okay when you get to the military base, together")
@@ -367,12 +367,12 @@ def fields(family):
         print("The field is empty, most people are running in the roads and in the streets, aimlessly")
 
     sleep(2)
-    system('cls')
+    system('clear')
     print("The fields feel safe, but you must keep your guard up, nowhere is safe when there's these creatures flooding the streets")
     sleep(2)
     print("Anything could appear, you have to stay aware of your surroundings")
     sleep(2)
-    system('cls')
+    system('clear')
     print("You come accross a massive patch of mud.")
     sleep(2)
     print("There's a path that goes around, but that could add another 15-20 minutes to your journey")
@@ -384,13 +384,13 @@ def fields(family):
         sleep(1)
         print("but your wife trusts your decision will be best.")
         sleep(2)
-    system('cls')
+    system('clear')
     while True:
         print("Will you go through the mud?")
         sleep(0.5)
         ans = input("Y- Yes \nN- No \n\n").upper()
         if ans == "Y":
-            system('cls')
+            system('clear')
             print("You go through the mud")
             sleep(2)
             print("It's deeper than you thought.")
@@ -400,12 +400,12 @@ def fields(family):
             if family:
                 print("Not being very tall, it comes up halfway up the bottom of your daughter's legs")
                 sleep(2)
-                system('cls')
+                system('clear')
                 print("They are *not* happy about it.")
             print("You get through the mud but you are now covered in mud.")
             break
         elif ans == "N":
-            system('cls')
+            system('clear')
             print("You go around the mud.")
             if family:
                 print("Amber and Chelsea's mood seems to have lifted")
@@ -416,7 +416,7 @@ def fields(family):
             print("\nInvalid Input")
             print()
             sleep(1)
-            system('cls')
+            system('clear')
 
     print("You walk for a little while longer until something catches your eye, it's silver and shiny")
     sleep(2)
@@ -470,7 +470,7 @@ def mil_base(has_family):
             print("Invalid answer. Try again.")
             pass
 
-    print("\nYou walk through yet another open field, towards a group of buildings. While walking, you hear distant gunshots. Whoever was fighting at the gate has clsly made it inside.\nYou reach a statue infront of a building. The plaque on the building reads: \"ORDINANCE STORAGE\".\nSuddenly, an explosion causes you to stagger and hide behind the statue. A hole is blown through a hallway connecting the munitions storage to another building. You see silhouettes of soldiers firing and advancing through the smoke.\n\nA lightbulb fires up in your head. That hole would be the perfect way to enter the building, and hopefully find a bunker of sorts, with enough supplies to last the apocalypse. It is a military base, after all.")
+    print("\nYou walk through yet another open field, towards a group of buildings. While walking, you hear distant gunshots. Whoever was fighting at the gate has clearly made it inside.\nYou reach a statue infront of a building. The plaque on the building reads: \"ORDINANCE STORAGE\".\nSuddenly, an explosion causes you to stagger and hide behind the statue. A hole is blown through a hallway connecting the munitions storage to another building. You see silhouettes of soldiers firing and advancing through the smoke.\n\nA lightbulb fires up in your head. That hole would be the perfect way to enter the building, and hopefully find a bunker of sorts, with enough supplies to last the apocalypse. It is a military base, after all.")
     print("You make a run for the hole in the wall. Once inside, you take a left and run down hallways upon hallways filled with debris and smoke. Eventually, you find a flight of stairs that goes down. The smoke and debris has disappeared.\n\nWhile descending, a booming voice on the intercom invades your ears:\n\"ATTENTION ALL PERSONNEL, AN AIR STRIKE HAS BEEN ORDERED ON THIS BASE IN T-60 MINUTES. EVACTUATION HELICOPTERS HAVE BEEN CALLED TO SECTOR 4. IF YOU DO NOT EVACUATE, YOU WILL BE LEFT BEHIND.\nI REPEAT, AN AIR STRIKE HAS BEEN ORDERED ON THIS BASE IN T-60 MINUTES. EVACTUATION HELICOPTERS HAVE BEEN CALLED TO SECTOR 4. IF YOU DO NOT EVACUATE, YOU WILL BE LEFT BEHIND.\"\n\nYour heart sinks. You need to find this bunker, and fast.\n\nYou make your way down 10 or more flight of stairs, now at the bottom.\n\nYou see 6 or so doors. All but 1 are locked. Opening it reveales another hallway, with 2 metal pocket doors at the end. They seem to be powered by hydraulics.\n\nOne of them is slightly ajar, while the other one is shut. You feel a cold air eminating from the door.")
 
     x = True
