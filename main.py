@@ -1,4 +1,3 @@
-import os
 import time
 import json
 from time import sleep
@@ -30,13 +29,14 @@ def pizza_guy():
         pizza_guy()
 
 def item_drop():
-
+    
+    inventory = [1, 2, 3, 4, 5]
     print("Your inventory is full, please choose an item to drop:")
     for item in inventory:
-        print(str(items[item]+ ' ' + ["id"])+items[item]["name"])
-    ans = input('\n')
+        print(str(items[item]["id"])+ ' ' +items[item]["name"])
+    ans = int(input('\n'))
     if ans in inventory:
-        print("Dropped" + items[ans]["name"])
+        print("Dropped " + items[ans]["name"])
         return ans
     else:
         item_drop()
@@ -53,13 +53,13 @@ def title():
 def tutorial():
     print("You're home, with your family. Your daughters, Chelsea and Amber are playing on the floor, you and your wife, Eve, are sitting on the couch, watching them play. You hear a knock on the door.")
     pizza_guy()
-    sleep(3)
+    sleep(7)
     system('cls')
     print("The evening continues as it usually would on a Friday, with you and your family enjoying each other's company. You decide to go to bed early, as you have a long day ahead of you tomorrow.")
-    sleep(3)
+    sleep(7)
     system('cls')
     print("You've been invited to the Amazon Rainforest as part of a research team by the MI6, you're an incredible scientist, one of the best in your field. \nA new virus has been found due to the deforestation. You're excited to go, but you're also nervous. You've never been to the Amazon before, and you've heard stories of people getting lost in the forest and never being found \nAnd this virus could turn out to be deadly.")
-    sleep(10)
+    sleep(15)
     system('cls')
 def downstairs():
     print("The house is eerily quiet. No sign of your family. You start to look around. There are 3 doors: kitchen, living room, and toilet. Also, stairs lead up.")
@@ -253,31 +253,31 @@ def loft():
 
 def airport():
     print("You feel the cool cloth of your bedsheets against your skin as you slowly come round, your eyes open and your sight is blurry but you can just about make out your room, you look to your right and see your wife asleep gently snoring.\nYou say your goodbyes and kiss her on the forehead before making your way downstairs.")
-    time.sleep(5)
+    time.sleep(15)
     print("The morning light shining through, the beautiful colours of yellow and orange lighting the living room with a hint of red almost seeping through tainting the room.")
-    time.sleep(5)
+    time.sleep(15)
     system('cls')
     print("You gather your things and get ready to head out the door before remembering you might need your car keys. Yeovil's airport has never been the highest of quality but it does have the benefit of being close to home, the rundown walls and old technology, smells damp and there are signs of water damage.")
-    time.sleep(7)
+    time.sleep(15)
     system('cls')
     print("You sit on one of the rusty old seats and it almost sounds like its screaming for help from the pressure, although you knew it was going to happen, something felt off, you have a bad feeling about something but cant quite pin what it is.\n Deciding its just nerves about the flight you opt to ignore it, keeping your eyes on the display, watching all the flights including your own. You notice that a flight gets cancelled and then another.")
-    time.sleep(10)
+    time.sleep(15)
     system('cls')
     print("A few minutes go by and then your flight gets cancelled, The nerves setting in doesn't help and so you approach the desk and ask whats going on, only to be told that they cant tell you. a gut feeling sinks in and you get the urge to leave.")
-    time.sleep(10)
+    time.sleep(15)
     system('cls')
     print("You choose to ignore the feeling and once again take your seat waiting patiently. the longer you wait the more you see other flights being cancelled.\n \n A lot of people begin to swarm around the front desk shouting questions, deciding youd come back later for the flight in the evening you stand up and grab your suitcase.")
-    time.sleep(5)
+    time.sleep(15)
     print("as you turn your back to the swarm of people you cant help but notice a few of them are attacking each other, this isnt an uncommon thing to happen but they seem to be getting very agressive. as you take your first step onto the carpark outside a man sprints past you knocking you to the ground.")
-    time.sleep(12)
+    time.sleep(15)
     system('cls')
     print("getting back up you see the same person who just ran past turning the corner, his red jumper was the only thing you could notice before he was gone. brushing yourself of, dazed and confused you pick up your suitcase.")
-    time.sleep(5)
+    time.sleep(15)
     print("You notice that a lot of people are hurrying to their cars, scrambling to open their doors, a few of them bleeding. You think there could have been an accident, maybe one of the old roofs collapsed? You get into your car, still confused about whats going on, and start to head home")
-    time.sleep(10)
+    time.sleep(15)
     system('cls')
     print("Fearing for the worst you make your way home, driving past houses that are eerily quiet, determined to get home to your family to make sure they are okay.")
-    time.sleep(10)
+    time.sleep(15)
     system('cls')
     print("Upon reaching the house, you receive a notification. It reads: 'To all citizens, please remain calm and stay inside your houses, lock all your doors and close your windows. This is not a test...'")
     print("The realization of what's going on begins to kick in, and a thought crosses your mind. What if you didn't go get your family? What if they had been attacked? What if they were aggressive?")
@@ -301,91 +301,91 @@ def house():
 def road_block(family):
     system('cls')
     print("You leave your house and jump in the car.")
-    sleep(2)
+    sleep(7)
     if family:
         print("Your daughters are in the back and your wife is next to you in the passenger seat. Everyone is worriedly silent, not sure what to say to make the mood lighter.")
     else:
         print("The car is eerily silent until you see some form of civilization.")
-    sleep(2)
+    sleep(7)
     print("There's a road block ahead. People are running everywhere and there's no chance of getting a car through this cha")
-    sleep(2)
+    sleep(7)
     print("You can see a handful of the strange-looking creatures that caused all this. They're definitely dangerous")
-    sleep(2)
+    sleep(7)
     print("You conclude that there's no option but to get out of the car and walk. You're not sure where you're going, but you know you have to get out of here.")
-    sleep(2)
+    sleep(7)
     print("Before getting out the car, you try to formulate a plan.")
-    sleep(2)
+    sleep(7)
     system('cls')
     print("There's a military base nearby, you could try to get there.")
-    sleep(2)
+    sleep(7)
     print("It won't be easy, but it's the best option for safety.")
-    sleep(2)
+    sleep(7)
     system('cls')
     if family:
         print("You continue, your wife holding Chelsea's hand and you holding Amber's.")
-        sleep(2)
+        sleep(7)
         print("Above everything, you need to keep your family safe.")
-        sleep(2)
+        sleep(7)
         print("Especially Amber and Chelsea, they're so young and innocent.")
     else:
         print("You continue, alone, worry for your family in the back of your mind")
         sleep(4)
         system('cls')
         print("But it's for the best, right?")
-    sleep(2)
+    sleep(7)
 
 
 def fields(family):
     system('cls')
     print("You've not been walking long, maybe 15 minutes, when you come across a field.")
-    sleep(2)
+    sleep(7)
     print("The field is bright green with specs of other colours. It's serene and calm.")
     sleep(1)
     print("There's no one in the field.")
-    sleep(2)
+    sleep(7)
     if family:
         print("Just you, and your family.")
     else:
         print("It's just you, walking alone.")
-    sleep(2)
+    sleep(7)
     system('cls')
     print("There's a few birds, but they're dead silent.")
-    sleep(2)
+    sleep(7)
     print("It's as if they're aware and of the danger and they're scared.")
-    sleep(2)
+    sleep(7)
     system('cls')
     if family:
         print("Despite the fact you've not been walking long, Chelsea and Amber are complaining their legs hurt.")
-        sleep(2)
+        sleep(7)
         print("You decide to take a break, and sit down in the field, but not for long.")
-        sleep(2)
+        sleep(7)
         system('cls')
         print("You're sat there for around 2 minutes, quiet talking in an attempt to calm them down.")
-        sleep(2)
+        sleep(7)
         print("You're scared, but you know everything will be okay when you get to the military base, together")
-        sleep(2)
+        sleep(7)
         print("You need to keep moving, you all stand up and continue walking.")
     else:
         print("The field is empty, most people are running in the roads and in the streets, aimlessly")
 
-    sleep(2)
+    sleep(7)
     system('cls')
     print("The fields feel safe, but you must keep your guard up, nowhere is safe when there's these creatures flooding the streets")
-    sleep(2)
+    sleep(7)
     print("Anything could appear, you have to stay aware of your surroundings")
-    sleep(2)
+    sleep(7)
     system('cls')
     print("You come accross a massive patch of mud.")
-    sleep(2)
+    sleep(7)
     print("There's a path that goes around, but that could add another 15-20 minutes to your journey")
     sleep(1)
     print("You have to decide whether to go around it or go through it.")
-    sleep(2)
+    sleep(7)
     if family:
         print("Both Chelsea and Amber are urging you to go around,")
         sleep(1)
         print("but your wife trusts your decision will be best.")
-        sleep(2)
+        sleep(7)
     system('cls')
     while True:
         print("Will you go through the mud?")
@@ -394,14 +394,14 @@ def fields(family):
         if ans == "Y":
             system('cls')
             print("You go through the mud")
-            sleep(2)
+            sleep(7)
             print("It's deeper than you thought.")
-            sleep(2)
+            sleep(7)
             print("Your entire feet and ankles are submerged.")
-            sleep(2)
+            sleep(7)
             if family:
                 print("Not being very tall, it comes up halfway up the bottom of your daughter's legs")
-                sleep(2)
+                sleep(7)
                 system('cls')
                 print("They are *not* happy about it.")
             print("You get through the mud but you are now covered in mud.")
@@ -421,7 +421,7 @@ def fields(family):
             system('cls')
 
     print("You walk for a little while longer until something catches your eye, it's silver and shiny")
-    sleep(2)
+    sleep(7)
     print("On closer inspection, you realise it's a crowbar. Do you take it?")
     while True:
         sleep(0.5)
@@ -434,16 +434,16 @@ def fields(family):
                 item = item_drop()
                 inventory.remove(item)
                 continue
-            sleep(2)
+            sleep(7)
             print("You take the crowbar, it could come in handy.")
             inventory.append(1)
             break
         if ans == "2":
-            sleep(2)
+            sleep(7)
             print("You leave the crowbar, it'll be too difficult to carry with you.")
             break
         else:
-            sleep(2)
+            sleep(7)
             print("Invalid input")
     print("You continue walking for about 30 minutes until you spot your destination up ahead")
     return inventory
