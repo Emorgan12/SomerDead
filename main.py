@@ -1,12 +1,17 @@
 import os
+import sys
 import time
 import json
 from time import sleep
 from os import system
 
 
-items = open('items.json', 'r')
-items = json.load(items)
+if getattr(sys, 'frozen', False):
+    items = json.load(open(os.path.join(sys._MEIPASS, 'json_data/items.json')))
+    
+else:
+    items = json.load(open("json_data/items.json"))
+
 inventory = []
 has_family = False
 
