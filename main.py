@@ -16,7 +16,7 @@ if getattr(sys, 'frozen', False):
 else:
     items = json.load(open("json_data/items.json"))
 
-inventory = [3, 6, 7]
+inventory = []
 has_family = False
 
 def pizza_guy(count=0):
@@ -39,7 +39,7 @@ def pizza_guy(count=0):
                 print("You ignore the door again. The knocking continues. You decide to ignore it and continue watching your daughters play.")
                 print("The pizza guy shouts again, this time louder, announcing he's here")
             if count == 3:
-                print("You ignore the door again. The knocking has stoppedd. You decide to ignore it and continue watching your daughters play.")
+                print("You ignore the door again. The knocking has stopped. ")
                 print("There's no shout this time, the pizza guy has left.")
                 return
     else:
@@ -49,10 +49,15 @@ def pizza_guy(count=0):
 
 def item_drop():
 
-    print("Your inventory is full, please choose an item to drop:")
+    print("Your inventory is full, please choose an item to drop (Enter the number):")
     for item in inventory:
         print(str(items[item]["id"]) + ' ' + str(items[item]["name"]))
-    ans = int(input('\n'))
+    ans = input('\n')
+    try:
+        ans = int(ans)
+    except ValueError:
+        print("Invalid input. Please enter a number.")
+        item_drop()
     if ans in inventory:
         print("Dropped " + items[ans]["name"])
         inventory.remove(ans)
@@ -99,7 +104,9 @@ def downstairs():
             kitchen()
 
         elif ans1 == "2":
-            print("You open the living room door and find it empty, with no signs of your family. The silence is unnerving.")
+            print("\nYou open the living room door and find it empty, with no signs of your family. The silence is unnerving.")
+            input("\nPress any key to continue.")
+            os.system(clear_cmd)
 
         elif ans1 == "3":
             garage()
@@ -110,23 +117,22 @@ def downstairs():
 
 def kitchen():
     if 1 not in inventory:
-        print("You open the kitchen door to find it barren. There's a kitchen knife on the counter. Should you take it?")
-        print("1. Take the knife")
+        print("\nYou open the kitchen door to find it barren. There's a kitchen knife on the counter. Should you take it?")
+        print("\n1. Take the knife")
         print("2. Leave the knife")
         ans2 = input("What do you do? ")
 
         while ans2 != "1" or ans2 != "2":
             if ans2 == "1":
                 if len(inventory) == 5:
-                    item = item_drop()
-                    inventory.remove(item)
+                    item_drop()
                 inventory.append(1)  # Add the knife to inventory
-                print("You feel the cold steel of the handle as you put it away.you check around the kitchen, looking under the tables making sure to look in every nook and cranny. They are not here. You return back to the hallway, knife sitting in your pocket")
+                print("\nYou feel the cold steel of the handle as you put it away.you check around the kitchen, looking under the tables making sure to look in every nook and cranny. They are not here. You return back to the hallway, knife sitting in your pocket")
                 input("\nPress any key to continue.")
                 os.system(clear_cmd)
                 break
             elif ans2 == "2":
-                print("You leave the knife and continue searching.you check around the kitchen, looking under the tables making sure to look in every nook and cranny. They are not here. You return back to the hallway")
+                print("\nYou leave the knife and continue searching.you check around the kitchen, looking under the tables making sure to look in every nook and cranny. They are not here. You return back to the hallway")
                 input("\nPress any key to continue.")
                 os.system(clear_cmd)
                 break
@@ -136,12 +142,12 @@ def kitchen():
                 os.system(clear_cmd)
                 
     else:
-        print("You open the kitchen door to find it barren, no signs of your familly in here")
+        print("\nYou open the kitchen door to find it barren, no signs of your familly in here")
         input("\nPress any key to continue.")
         os.system(clear_cmd)
 
 def garage():
-    print("You open the garage door and enter the darkness, you feel the familiar placing of the lightswitch and illuminate the area, the light shining on your workpace.")
+    print("\nYou open the garage door and enter the darkness, you feel the familiar placing of the lightswitch and illuminate the area, the light shining on your workpace.")
     input("\nPress any key to continue.")
     os.system(clear_cmd)
             
@@ -149,25 +155,25 @@ def garage():
         print("\nYou notice that your rope is still here from when you were planning to make a rope swing for your girls. it was meant to be a christmas present for them. Do you really want to take it? ")
 
         while True:
-            print("1. Take the Rope")
+            print("\n1. Take the Rope")
             print("2. Leave the Rope, maybe you can still make their present.")
             ans7 = input("What do you do? ")
 
             if ans7 == "1":
                 if len(inventory) == 5:
-                    item = item_drop()
-                    inventory.remove(item)
+                    item_drop()
                 inventory.append(6)
-                print("You take the Rope and continue searching.")
+                print("\nYou take the Rope and continue searching.")
                 input("\nPress any key to continue.")
                 os.system(clear_cmd)
                 break
                 
 
             elif ans7 == "2":
-                print("you leave the Rope and continue searching.")
+                print("\nYou leave the Rope and continue searching.")
                 input("\nPress any key to continue.")
                 os.system(clear_cmd)
+                break
             
     if 7 not in inventory:
         print("\nAnd finally you see your trusty torch, a hand crank on the side allows for unlimited use, could be useful for dark areas or the night. Do you take it?")
@@ -178,24 +184,23 @@ def garage():
 
             if ans6 == "1":
                 if len(inventory) == 5:
-                    item = item_drop()
-                    inventory.remove(item)
+                    item_drop()
                 inventory.append(7)
-                print("You take the Torch and head back to the corridoor")
+                print("\nYou take the Torch and head back to the corridoor")
                 input("\nPress any key to continue.")
                 os.system(clear_cmd)
                 break
 
             elif ans6 == "2":
-                print("you leave the Torch and head back to the corridoor.")
+                print("\nYou leave the Torch and head back to the corridoor.")
                 input("\nPress any key to continue.")
                 os.system(clear_cmd)
-                continue
+                break
 
 def upstairs():
-    print("You decide to go upstairs. The stairs creak as you ascend, and your heart races with each step.")
+    print("\nYou decide to go upstairs. The stairs creak as you ascend, and your heart races with each step.")
     while True:
-        print("You reach the top, where all the doors are closed. What do you do?")
+        print("\nYou reach the top, where all the doors are closed. What do you do?")
         print("1. Open the girls door")
         print("2. Open The bathroom door")
         print("3. Open your bedroom door")
@@ -205,7 +210,7 @@ def upstairs():
         ans2 = input("What do you do? ")
     
         if ans2 == "1":
-            print("You open the girls door and feel a strange sense of dread. The room is quiet. The pink vibrant walls feeling seamingly dull, their toys and books lay scattered on the floor.\n You take a few steps into the room and check the girls closet hoping to find one of them hiding. No Luck. your family isnt here. You return back to the to the top of the stairs.")
+            print("\nYou open the girls door and feel a strange sense of dread. The room is quiet. The pink vibrant walls feeling seamingly dull, their toys and books lay scattered on the floor.\n You take a few steps into the room and check the girls closet hoping to find one of them hiding. No Luck. your family isnt here. You return back to the to the top of the stairs.")
             input("\nPress any key to continue.")
             os.system(clear_cmd)
             continue
@@ -215,7 +220,7 @@ def upstairs():
             bathroom()
 
         elif ans2 == "3":
-            print("You open your bedroom door. Everything seems fine, but you still feel uneasy. Your wife is nowhere to be seen and it doesnt look like anythings changed")
+            print("\nYou open your bedroom door. Everything seems fine, but you still feel uneasy. Your wife is nowhere to be seen and it doesnt look like anythings changed")
             input("\nPress any key to continue.")
             os.system(clear_cmd)
 
@@ -225,17 +230,14 @@ def upstairs():
         elif ans2 == "5":
             downstairs()        
         else:
-            print("Invalid choice. Try again.")
-            input("\nPress any key to continue.")
-            os.system(clear_cmd)
-            continue
+            print("\nInvalid choice. Try again.")
         continue
 
 def bathroom():
     if 3 not in inventory:
-        print("You open the bathroom door. It looks untouched, but the atmosphere feels thick. theres still water in the bathtub, nothing unusual here. however you notice a rubber duck, bouncing off the walls of the tub. Maybe it could be useful?")
+        print("\nYou open the bathroom door. It looks untouched, but the atmosphere feels thick. theres still water in the bathtub, nothing unusual here. however you notice a rubber duck, bouncing off the walls of the tub. Maybe it could be useful?")
         while True:
-            print("Take the duck?")
+            print("\nTake the duck?")
             print("1, Yes")
             print("2, No")
 
@@ -243,33 +245,30 @@ def bathroom():
 
             if ans4 =="1":
                 if len(inventory) == 5:
-                    item = item_drop()
-                    inventory.remove(item)
-                print("You pick up the duck, it quacks softly")
+                    item_drop()
+                print("\nYou pick up the duck, it quacks softly")
                 inventory.append(3)
                 input("\nPress any key to continue.")
                 os.system(clear_cmd)
                 break
 
             elif ans4 =="2":
-                print("You leave the duck, it's probably useless")
+                print("\nYou leave the duck, it's probably useless")
                 input("\nPress any key to continue.")
                 os.system(clear_cmd)
                 break
 
             else:
                 print("Invalid choice. Please enter 1 or 2.")
-                input("\nPress any key to continue.")
-                os.system(clear_cmd)
 
     else:
-        print("You open the bathroom door. It looks untouched, but the atmosphere feels thick. theres still water in the bathtub, nothing unusual here.")
+        print("\nYou open the bathroom door. It looks untouched, but the atmosphere feels thick. theres still water in the bathtub, nothing unusual here.")
         input("\nPress any key to continue.")
         os.system(clear_cmd)
 
     while 2 not in inventory:
-        print("on closer inspection of the bathroom you also happen to notice that the clean plunger is still sat in the corner, perhaps this could be of use?")
-        print("Take the clean plunger?")
+        print("\nOn closer inspection of the bathroom you also happen to notice that the clean plunger is still sat in the corner, perhaps this could be of use?")
+        print("\nTake the clean plunger?")
         print("1, Yes")
         print("2, No")
 
@@ -277,50 +276,47 @@ def bathroom():
 
         if ans8 =="1":
             if len(inventory) == 5:
-                item = item_drop()
-                inventory.remove(item)
+                item_drop()
                 continue
-            print("This'll be inconvienient to carry but it might come in handy.")
+            print("\nThis'll be inconvienient to carry but it might come in handy.")
             inventory.append(2)
             input("\nPress any key to continue.")
             os.system(clear_cmd)
-            print("Deciding that you had found everything needed from the bathroom you return to the stairs.")
+            print("\nDeciding that you had found everything needed from the bathroom you return to the stairs.")
             input("\nPress any key to continue.")
             os.system(clear_cmd)
             break
 
         elif ans8 =="2":
-            print("deciding that you had found everything needed from the bathroom you return to the stairs.")
+            print("\nDeciding that you had found everything needed from the bathroom you return to the stairs.")
             input("\nPress any key to continue.")
             os.system(clear_cmd)
             break
 
         else:
-            print("Invalid choice. Please enter 1 or 2.")
-            input("\nPress any key to continue.")
-            os.system(clear_cmd)
+            print("\nInvalid choice. Please enter 1 or 2.")
+    return inventory
 
 def loft():
-    print("You open the loft hatch. The stale air and chill run down your spine as you peer inside. the dark cold loft stares back at you, you swear you see something move in the corner, it seems to be getting closer to you. The panick sets in and you turn on your phones flashlight, just to see a face staring back at you, at first you jump and are prepared to attack before hearing your wifes soft voice. Your panic begins to become relief as you see your whole family up there. you climb up into the loft and ponder your options, you clould either stay up in the loft and hope for the best, or go out and try and find help, maybe the government have a safe zone.")
+    print("\nYou open the loft hatch. The stale air and chill run down your spine as you peer inside. the dark cold loft stares back at you, you swear you see something move in the corner, it seems to be getting closer to you. The panick sets in and you turn on your phones flashlight, just to see a face staring back at you, at first you jump and are prepared to attack before hearing your wifes soft voice. Your panic begins to become relief as you see your whole family up there. you climb up into the loft and ponder your options, you clould either stay up in the loft and hope for the best, or go out and try and find help, maybe the government have a safe zone.")
     
-    print("1, Stay with your family.")
-    print("2, leave with your family and try to find help")
-    ans3 = input("What do you do? ")
+    while True:
+        print("\n1, Stay with your family.")
+        print("2, leave with your family and try to find help")
+        ans3 = input("What do you do? ")
 
-    if ans3 == "1":
-        print("You decide to stay in the loft, hoping that you're safe up there with your family. You huddle together, waiting for the night to pass. you awake suddenly as you hear a crash coming from inside the house, deeming it too risky to go down you lock the hatch and tell your family never to go down there.\n As the days go past, the girls keep complaining that their stomachs hurt and that they are hungry, begging you to please get food, you reasure them that help will be here soon and that itll all be okay.\n you look to your wife to see how she is, and she is just sat in the corner, her once beautiful eyes blankly staring into the ground.\n \n You wake up feeling weak the next day, knowing that you wont live much longer, and you begin to smell something that feels off, you turn to your wife and notice her bony figure,\n she never did eat as much as you but you could tell that she wasnt with you anymore, the pain of starvation was more of an annoyance to you, knowing that your family were dying hurt tons more.\n the girls laid down on the ground occasionally letting out a sniffle. at least it reasured you that they were okay for now. praying that someone would rescue you, all the while reassuring your girls that mum had just gone to a better place and they would all be seeing her soon.\n As the day went on, you knew that you wouldn't survive the night, and so, you huddled close with your girls holding them both close and looking at their bony faces for the last time, and your eyes start to fade, joining your wife and daughters in peace.")
-        input("\nPress any key to continue.")
-        os.system(clear_cmd)
-        return True, inventory
-    elif ans3 == "2":
-        print("You decide to leave the loft and try to find help. You carefully climb back down and help your family down the ladder , beggining to prepare to search for safety.")
-        input("\nPress any key to continue.")
-        os.system(clear_cmd)
-        return False, inventory
-    else:
-        print("Invalid choice. Please enter 1 or 2")
-        input("\nPress any key to continue.")
-        os.system(clear_cmd)
+        if ans3 == "1":
+            print("\nYou decide to stay in the loft, hoping that you're safe up there with your family. You huddle together, waiting for the night to pass. you awake suddenly as you hear a crash coming from inside the house, deeming it too risky to go down you lock the hatch and tell your family never to go down there.\n As the days go past, the girls keep complaining that their stomachs hurt and that they are hungry, begging you to please get food, you reasure them that help will be here soon and that itll all be okay.\n you look to your wife to see how she is, and she is just sat in the corner, her once beautiful eyes blankly staring into the ground.\n \n You wake up feeling weak the next day, knowing that you wont live much longer, and you begin to smell something that feels off, you turn to your wife and notice her bony figure,\n she never did eat as much as you but you could tell that she wasnt with you anymore, the pain of starvation was more of an annoyance to you, knowing that your family were dying hurt tons more.\n the girls laid down on the ground occasionally letting out a sniffle. at least it reasured you that they were okay for now. praying that someone would rescue you, all the while reassuring your girls that mum had just gone to a better place and they would all be seeing her soon.\n As the day went on, you knew that you wouldn't survive the night, and so, you huddled close with your girls holding them both close and looking at their bony faces for the last time, and your eyes start to fade, joining your wife and daughters in peace.")
+            input("\nPress any key to continue.")
+            os.system(clear_cmd)
+            return True, inventory
+        elif ans3 == "2":
+            print("\nYou decide to leave the loft and try to find help. You carefully climb back down and help your family down the ladder , beginning to prepare to search for safety.")
+            input("\nPress any key to continue.")
+            os.system(clear_cmd)
+            return False, inventory
+        else:
+            print("\nInvalid choice. Please enter 1 or 2")
 
 def airport():
     print("You feel the cool cloth of your bedsheets against your skin as you slowly come round, your eyes open and your sight is blurry but you can just about make out your room, you look to your right and see your wife asleep gently snoring.\nYou say your goodbyes and kiss her on the forehead before making your way downstairs.")
@@ -502,6 +498,7 @@ def fields(family):
         print("Will you go through the mud?")
         ans = input("Y- Yes \nN- No \n\n").upper()
         if ans == "Y":
+            system(clear_cmd)
             print("You go through the mud")
             input("\nPress any key to continue.")
             os.system(clear_cmd)
@@ -540,9 +537,6 @@ def fields(family):
             break
         else:
             print("\nInvalid Input")
-            print()
-            input("\nPress any key to continue.")
-            os.system(clear_cmd)
 
     print("You walk for a little while longer until something catches your eye, it's silver and shiny")
     input("\nPress any key to continue.")
@@ -555,51 +549,45 @@ def fields(family):
         ans = input()
         if ans == "1":
             if len(inventory) == 5:
-                item = item_drop()
-                inventory.remove(item)
+                item_drop()
                 continue
-            sleep(2)
+            system(clear_cmd)
             print("You take the crowbar, it could come in handy.")
             inventory.append(1)
             input("\nPress any key to continue.")
             os.system(clear_cmd)
             break
         if ans == "2":
+            system(clear_cmd)
             print("You leave the crowbar, it'll be too difficult to carry with you.")
             input("\nPress any key to continue.")
             os.system(clear_cmd)
             break
         else:
             print("Invalid input")
-            input("\nPress any key to continue.")
-            os.system(clear_cmd)
     print("You continue walking for about 30 minutes until you spot your destination up ahead")
     input("\nPress any key to continue.")
     os.system(clear_cmd)
     return inventory
 
 def mil_base(has_family):
-    sleep(10)
     x = True
     print("After a long walk along the heedgerows of the fields, you find yourself at a barbed wire fence with a sign reading \"NO ENTRY\". This must be the military base. You follow the fence west, as that must be where the entrance is.\n\nIn the distance, you can see the gate. Something is off. There is not a single person in sight. You get closer and realize that the gate has been forced open. Upon closer inspection, you notice bodies in and around the cars lined up in front of the gate. \nA firefight seems to have broken out between the military and an unknown third party, resulting in the death of a guard sitting in a gatehouse on the right side of the gate.\n\nSearch his body?\n\n1. Search his body.\n2. Continue forward and ignore it.")
-    input("\nPress any key to continue.")
-    os.system(clear_cmd)
     while x:
-        ans = input("\n\n")
+        ans = input("\n")
         
         if ans == "1":
             if len(inventory) == 5:
-                item = item_drop()
-                inventory.remove(item)
+                item_drop()
                 continue
-            print("A fowl stench assaults your nose. From his body, you obtain a keycard. Something bugs you, however: The guard has only died recently. How has his body rotten this badly?\nYou brush it off and move on. As you leave, you feel like you saw the body twitch.")
+            print("\nA fowl stench assaults your nose. From his body, you obtain a keycard. Something bugs you, however: The guard has only died recently. How has his body rotten this badly?\nYou brush it off and move on. As you leave, you feel like you saw the body twitch.")
             input("\nPress any key to continue.")
             os.system(clear_cmd)
             inventory.append(8)
             x = False
         
         elif ans == "2":
-            print("Even as a top of the line biologist, dead bodies give you the ick. You decide to pass.")
+            print("\nEven as a top of the line biologist, dead bodies give you the ick. You decide to pass.")
             input("\nPress any key to continue.")
             os.system(clear_cmd)
             x = False
@@ -608,7 +596,7 @@ def mil_base(has_family):
             print("Invalid answer. Try again.")
             pass
 
-    print("\nYou walk through yet another open field, towards a group of buildings. While walking, you hear distant gunshots. Whoever was fighting at the gate has clearly made it inside.\nYou reach a statue infront of a building. The plaque on the building reads: \"ORDINANCE STORAGE\".\nSuddenly, an explosion causes you to stagger and hide behind the statue. A hole is blown through a hallway connecting the munitions storage to another building. You see silhouettes of soldiers firing and advancing through the smoke.\n\nA lightbulb fires up in your head. That hole would be the perfect way to enter the building, and hopefully find a bunker of sorts, with enough supplies to last the apocalypse. It is a military base, after all.")
+    print("You walk through yet another open field, towards a group of buildings. While walking, you hear distant gunshots. Whoever was fighting at the gate has clearly made it inside.\nYou reach a statue infront of a building. The plaque on the building reads: \"ORDINANCE STORAGE\".\nSuddenly, an explosion causes you to stagger and hide behind the statue. A hole is blown through a hallway connecting the munitions storage to another building. You see silhouettes of soldiers firing and advancing through the smoke.\n\nA lightbulb fires up in your head. That hole would be the perfect way to enter the building, and hopefully find a bunker of sorts, with enough supplies to last the apocalypse. It is a military base, after all.")
     input("\nPress any key to continue.")
     os.system(clear_cmd)
     print("You make a run for the hole in the wall. Once inside, you take a left and run down hallways upon hallways filled with debris and smoke. Eventually, you find a flight of stairs that goes down. The smoke and debris has disappeared.\n\nWhile descending, a booming voice on the intercom invades your ears:\n\"ATTENTION ALL PERSONNEL, AN AIR STRIKE HAS BEEN ORDERED ON THIS BASE IN T-60 MINUTES. EVACTUATION HELICOPTERS HAVE BEEN CALLED TO SECTOR 4. IF YOU DO NOT EVACUATE, YOU WILL BE LEFT BEHIND.\nI REPEAT, AN AIR STRIKE HAS BEEN ORDERED ON THIS BASE IN T-60 MINUTES. EVACTUATION HELICOPTERS HAVE BEEN CALLED TO SECTOR 4. IF YOU DO NOT EVACUATE, YOU WILL BE LEFT BEHIND.\"\n\nYour heart sinks. You need to find this bunker, and fast.\n\nYou make your way down 10 or more flight of stairs, now at the bottom.\n\nYou see 6 or so doors. All but 1 are locked. Opening it reveales another hallway, with 2 metal pocket doors at the end. They seem to be powered by hydraulics.\n\nOne of them is slightly ajar, while the other one is shut. You feel a cold air eminating from the door.")
@@ -675,15 +663,16 @@ def mil_base(has_family):
             print("There are 4 of you and only 1 operational cryopod, so obviously, you enable the other ones. Now you face a different conundrum: There are 3 cryo-pods, so who's going to be left behind?\nYou return to the room, all cryo-pods operational, and explain the situation. Your 2 kids are already in the pods.\nYour wife says she is willing to sacrifice herself. What do you do?")
 
             while x:
-                ans = input("\n1. Sacrifice yourself.\n2. Sacrifice your wife.")
+                ans = input("\n1. Sacrifice yourself.\n2. Sacrifice your wife.\n\n")
                 if ans == "1":
-                    print("You decide to sacrifice yourself. You would not stand to see yourself throw away the love of your life like it is nothing. You say your goodbyes and wish them good luck. From the control room, you activate the cryo-pods and lock both doors. Now what? You start to think. You should be close to the ordinance building. Maybe you could find a way to escape the military base?\nYou head back through the endless hallways and the 10 flights of stairs. The smoke suffocating the hallways on the first floor is now gone. You head to the end of the hall and find an open door.\nInside, you find kilograms upon kilograms of C4 explosives. You're a thrifty individual, so you easily figure out how you could wire them to detonate. You also spot a bag, which would make it easier to carry all this C4. Might as well go out with a bang.\nYou go through the hallways, looking for a good spot to make your last stand. You loot countless bodies for weapons and ammunition, until you head a gunshot up ahead.\nIt came from an injured bandit putting themselves out in the cafeteria. You found your last stand. You set the C4. In total, it has been roughly 40 minutes since the announcement. The helicopters seem to have left early, probably due to the masses of zombies swarming the heli-pads outside.\nYou notice a lit flare and try to find some that havent been lit, to grab the attention of the zombies. Bingo!\nArmed to the teeth and having set up your explosive coffin, you go outside and light a flare, screaming as loudly as possible. A horde of zombies screams out in unison, slowly devolving into a gargle of grunts and moans.\nYou run back inside and take position behind a counter. The way the cafeteria is layed out, the zombies funnel in through one hallway only. You fight endlessly, taking out hundreds of zombies until you run out of ammo.\nAs you get overrun by zombies and your finger is on the detonator, the air strike hits the military base just in time. The base goes off like a firework. You, along with the other thousands of zombies, are obliterated.\n\n10 years later, your wife and children are found by the MI6, expecting to find you. The zombies, after 10 years, were so rotten, that they were practically walking bones, and thus, collapsed for the last time. Your family is now free, living happily ever after. You now watch over them from the afterlife. Not too bad, actually.\n\nThe game will now close.")
+                    print("\nYou decide to sacrifice yourself. You would not stand to see yourself throw away the love of your life like it is nothing. You say your goodbyes and wish them good luck. From the control room, you activate the cryo-pods and lock both doors. Now what? You start to think. You should be close to the ordinance building. Maybe you could find a way to escape the military base?\nYou head back through the endless hallways and the 10 flights of stairs. The smoke suffocating the hallways on the first floor is now gone. You head to the end of the hall and find an open door.\nInside, you find kilograms upon kilograms of C4 explosives. You're a thrifty individual, so you easily figure out how you could wire them to detonate. You also spot a bag, which would make it easier to carry all this C4. Might as well go out with a bang.\nYou go through the hallways, looking for a good spot to make your last stand. You loot countless bodies for weapons and ammunition, until you head a gunshot up ahead.\nIt came from an injured bandit putting themselves out in the cafeteria. You found your last stand. You set the C4. In total, it has been roughly 40 minutes since the announcement. The helicopters seem to have left early, probably due to the masses of zombies swarming the heli-pads outside.\nYou notice a lit flare and try to find some that havent been lit, to grab the attention of the zombies. Bingo!\nArmed to the teeth and having set up your explosive coffin, you go outside and light a flare, screaming as loudly as possible. A horde of zombies screams out in unison, slowly devolving into a gargle of grunts and moans.\nYou run back inside and take position behind a counter. The way the cafeteria is layed out, the zombies funnel in through one hallway only. You fight endlessly, taking out hundreds of zombies until you run out of ammo.\nAs you get overrun by zombies and your finger is on the detonator, the air strike hits the military base just in time. The base goes off like a firework. You, along with the other thousands of zombies, are obliterated.\n\n10 years later, your wife and children are found by the MI6, expecting to find you. The zombies, after 10 years, were so rotten, that they were practically walking bones, and thus, collapsed for the last time. Your family is now free, living happily ever after. You now watch over them from the afterlife. Not too bad, actually.\n\nThe game will now close.")
                     input("\nPress any key to continue.")
                     os.system(clear_cmd)
+                    quit()
                     #sacrifice yourself and save your family ending
 
                 elif ans == "2":
-                    print("You take your wife's word and go inside the cryopod. After saying your goodbyes, she activates the cryo-pods and locks both doors. The last image in your mind is of a blurry outside, with your wife being merely a figure on the outside of the condensating glass. You suddenly awake to pressure being let out of your pod. It's the MI6. They have come to retrieve you. After all, you are still an important asset. You catch a glimpse of a skeleton sitting in the corner of the control room. The apocalypse has ended, as all the zombies eventually became so rotten they were mere bones, and thus, the virus went extinct. You organize a funeral for your wife, and go back to your job as a biologist, raising your kids. You sometimes feel bittersweet that your wife did not survive, but at least you have your kids. Life is good again.\n\nThe game will now end.")
+                    print("\nYou take your wife's word and go inside the cryopod. After saying your goodbyes, she activates the cryo-pods and locks both doors. The last image in your mind is of a blurry outside, with your wife being merely a figure on the outside of the condensating glass. You suddenly awake to pressure being let out of your pod. It's the MI6. They have come to retrieve you. After all, you are still an important asset. You catch a glimpse of a skeleton sitting in the corner of the control room. The apocalypse has ended, as all the zombies eventually became so rotten they were mere bones, and thus, the virus went extinct. You organize a funeral for your wife, and go back to your job as a biologist, raising your kids. You sometimes feel bittersweet that your wife did not survive, but at least you have your kids. Life is good again.\n\nThe game will now end.")
                     input("\nPress any key to continue.")
                     os.system(clear_cmd)
                     quit()
@@ -715,22 +704,20 @@ def mil_base(has_family):
         quit()
         #family dies at cryo-pod ending
     
-'''
-def main():
-    title()
-    tutorial()
-    family = airport()
-    if family:
-        stay, inventory = house() 
-        if stay:
-            exit()
-    road_block(family)
-    inventory = fields(family)
-    mil_base(family) 
+
+# def main():
+#     title()
+#     tutorial()
+#     family = airport()
+#     if family:
+#         stay, inventory = house() 
+#         if stay:
+#             exit()
+#     road_block(family)
+#     inventory = fields(family)
+#     mil_base(family) 
     
-if __name__ == "__main__":
-    main()
+# if __name__ == "__main__":
+#     main()
 
-'''
-
-item_drop()
+mil_base(True)
