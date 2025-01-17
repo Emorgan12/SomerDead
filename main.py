@@ -61,7 +61,6 @@ def item_drop():
     if ans in inventory:
         print("Dropped " + items[ans]["name"])
         inventory.remove(ans)
-        print(inventory)
         return ans
     else:
         print("This item is not in your inventory")
@@ -124,7 +123,7 @@ def kitchen():
 
         while ans2 != "1" or ans2 != "2":
             if ans2 == "1":
-                if len(inventory) == 5:
+                if len(inventory) >= 5:
                     item_drop()
                 inventory.append(1)  # Add the knife to inventory
                 print("\nYou feel the cold steel of the handle as you put it away.you check around the kitchen, looking under the tables making sure to look in every nook and cranny. They are not here. You return back to the hallway, knife sitting in your pocket")
@@ -160,7 +159,7 @@ def garage():
             ans7 = input("What do you do? ")
 
             if ans7 == "1":
-                if len(inventory) == 5:
+                if len(inventory) >= 5:
                     item_drop()
                 inventory.append(6)
                 print("\nYou take the Rope and continue searching.")
@@ -183,7 +182,7 @@ def garage():
             ans6 = input("What do you do? ")
 
             if ans6 == "1":
-                if len(inventory) == 5:
+                if len(inventory) >= 5:
                     item_drop()
                 inventory.append(7)
                 print("\nYou take the Torch and head back to the corridor")
@@ -244,7 +243,7 @@ def bathroom():
             ans4 = input()
 
             if ans4 =="1":
-                if len(inventory) == 5:
+                if len(inventory) >= 5:
                     item_drop()
                 print("\nYou pick up the duck, it quacks softly")
                 inventory.append(3)
@@ -275,9 +274,8 @@ def bathroom():
         ans8 = input()
 
         if ans8 =="1":
-            if len(inventory) == 5:
+            if len(inventory) >= 5:
                 item_drop()
-                continue
             print("\nThis'll be inconvienient to carry but it might come in handy.")
             inventory.append(2)
             input("\nPress any key to continue.")
@@ -512,12 +510,11 @@ def fields(family):
         
         ans = input()
         if ans == "1":
-            if len(inventory) == 5:
+            if len(inventory) >= 5:
                 item_drop()
-                continue
             system(clear_cmd)
             print("You take the crowbar, it could come in handy.")
-            inventory.append(1)
+            inventory.append(0)
             input("\nPress any key to continue.")
             os.system(clear_cmd)
             break
@@ -541,9 +538,8 @@ def mil_base(has_family):
         ans = input("\n")
         
         if ans == "1":
-            if len(inventory) == 5:
+            if len(inventory) >= 5:
                 item_drop()
-                continue
             print("\nA fowl stench assaults your nose. From his body, you obtain a keycard. Something bugs you, however: The guard has only died recently. How has his body rotten this badly?\nYou brush it off and move on. As you leave, you feel like you saw the body twitch.")
             input("\nPress any key to continue.")
             os.system(clear_cmd)
