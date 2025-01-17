@@ -670,19 +670,17 @@ def mil_base(has_family):
         #family dies at cryo-pod ending
     
 
-# def main():
-#     title()
-#     tutorial()
-#     family = airport()
-#     if family:
-#         stay, inventory = house() 
-#         if stay:
-#             exit()
-#     road_block(family)
-#     inventory = fields(family)
-#     mil_base(family) 
+def main():
+    title()
+    tutorial()
+    family = airport()
+    if family:
+        stay, inventory = house() 
+        if stay:
+            exit()
+    road_block(family)
+    inventory = fields(family)
+    mil_base(family) 
     
-# if __name__ == "__main__":
-#     main()
-
-mil_base(True)
+if __name__ == "__main__":
+    main()
