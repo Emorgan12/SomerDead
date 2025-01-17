@@ -186,13 +186,13 @@ def garage():
                 if len(inventory) == 5:
                     item_drop()
                 inventory.append(7)
-                print("\nYou take the Torch and head back to the corridoor")
+                print("\nYou take the Torch and head back to the corridor")
                 input("\nPress any key to continue.")
                 os.system(clear_cmd)
                 break
 
             elif ans6 == "2":
-                print("\nYou leave the Torch and head back to the corridoor.")
+                print("\nYou leave the Torch and head back to the corridor.")
                 input("\nPress any key to continue.")
                 os.system(clear_cmd)
                 break
@@ -428,14 +428,8 @@ def road_block(family):
 
 def fields(family):
     print("You've not been walking long, maybe 15 minutes, when you come across a field.")
-    input("\nPress any key to continue.")
-    os.system(clear_cmd)
     print("The field is bright green with specs of other colours. It's serene and calm.")
-    input("\nPress any key to continue.")
-    os.system(clear_cmd)
     print("There's no one in the field.")
-    input("\nPress any key to continue.")
-    os.system(clear_cmd)
     if family:
         print("Just you, and your family.")
         input("\nPress any key to continue.")
@@ -446,44 +440,26 @@ def fields(family):
         os.system(clear_cmd)
 
     print("There's a few birds, but they're dead silent.")
-    input("\nPress any key to continue.")
-    os.system(clear_cmd)
     print("It's as if they're aware and of the danger and they're scared.")
     input("\nPress any key to continue.")
     os.system(clear_cmd)
     if family:
-        print("Despite the fact you've not been walking long, Chelsea and Amber are complaining their legs hurt.")
-        input("\nPress any key to continue.")
-        os.system(clear_cmd)
-        print("You decide to take a break, and sit down in the field, but not for long.")
-        input("\nPress any key to continue.")
-        os.system(clear_cmd)
-        print("You're sat there for around 2 minutes, quiet talking in an attempt to calm them down.")
-        input("\nPress any key to continue.")
-        os.system(clear_cmd)
-        print("You're scared, but you know everything will be okay when you get to the military base, together")
-        input("\nPress any key to continue.")
-        os.system(clear_cmd)
-        print("You need to keep moving, you all stand up and continue walking.")
+        print("Despite not having walked long, Chelsea and Amber complain their legs hurt.")
+        print("You decide to take a break and sit down in the field, but not for long.")
+        print("For around 2 minutes, there is quiet talking to calm them down.")
+        print("They are scared, but knowing everything will be okay when you get to the military base, together.")
+        print("Needing to keep moving, everyone stands up and continues walking.")
         input("\nPress any key to continue.")
         os.system(clear_cmd)
     else:
         print("The field is empty, most people are running in the roads and in the streets, aimlessly")
-        input("\nPress any key to continue.")
-        os.system(clear_cmd)
 
     print("The fields feel safe, but you must keep your guard up, nowhere is safe when there's these creatures flooding the streets")
-    input("\nPress any key to continue.")
-    os.system(clear_cmd)
     print("Anything could appear, you have to stay aware of your surroundings")
     input("\nPress any key to continue.")
     os.system(clear_cmd)
-    print("You come accross a massive patch of mud.")
-    input("\nPress any key to continue.")
-    os.system(clear_cmd)
+    print("You come across a massive patch of mud.") 
     print("There's a path that goes around, but that could add another 15-20 minutes to your journey")
-    input("\nPress any key to continue.")
-    os.system(clear_cmd)
     print("You have to decide whether to go around it or go through it.")
     input("\nPress any key to continue.")
     os.system(clear_cmd)
@@ -491,52 +467,40 @@ def fields(family):
         print("Both Chelsea and Amber are urging you to go around,")
         input("\nPress any key to continue.")
         os.system(clear_cmd)
-        print("but your wife trusts your decision will be best.")
+        print("But your wife trusts your decision will be best.")
         input("\nPress any key to continue.")
         os.system(clear_cmd)
     while True:
-        print("Will you go through the mud?")
-        ans = input("Y- Yes \nN- No \n\n").upper()
-        if ans == "Y":
+        print("What do you do?")
+        ans = input("1. Go through the mud \n2. Go around the mud \n\n")
+        if ans == "1":
             system(clear_cmd)
             print("You go through the mud")
             input("\nPress any key to continue.")
             os.system(clear_cmd)
             print("It's deeper than you thought.")
-            input("\nPress any key to continue.")
-            os.system(clear_cmd)
             print("Your entire feet and ankles are submerged.")
-            input("\nPress any key to continue.")
-            os.system(clear_cmd)
             if family:
-                print("Not being very tall, it comes up halfway up the bottom of your daughter's legs")
-                input("\nPress any key to continue.")
-                os.system(clear_cmd)
-                print("They are *not* happy about it.")
-                input("\nPress any key to continue.")
-                os.system(clear_cmd)
-            print("You get through the mud but you are now covered in mud.")
+                print("Not being very tall, it comes up halfway up the bottom of your daughters' legs.")
+                print("They are not happy about it.")
+            print("You get through the it successfully but you are now incredibly dirty.")
             input("\nPress any key to continue.")
             os.system(clear_cmd)
             break
-        elif ans == "N":
+        elif ans == "2":
             system(clear_cmd)
             print("You go around the mud.")
             input("\nPress any key to continue.")
             os.system(clear_cmd)
             if family:
                 print("Amber and Chelsea's mood seems to have lifted")
-                input("\nPress any key to continue.")
-                os.system(clear_cmd)
                 print("They really didn't want to go through that mud")
-                input("\nPress any key to continue.")
-                os.system(clear_cmd)
             print("You may have stayed clean and dry but added 20 minutes to your journey")
             input("\nPress any key to continue.")
             os.system(clear_cmd)
             break
         else:
-            print("\nInvalid Input")
+            print("Invalid Input\n")
 
     print("You walk for a little while longer until something catches your eye, it's silver and shiny")
     input("\nPress any key to continue.")
@@ -564,7 +528,7 @@ def fields(family):
             os.system(clear_cmd)
             break
         else:
-            print("Invalid input")
+            print("\nInvalid input")
     print("You continue walking for about 30 minutes until you spot your destination up ahead")
     input("\nPress any key to continue.")
     os.system(clear_cmd)
