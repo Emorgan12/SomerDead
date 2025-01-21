@@ -593,7 +593,7 @@ def mil_base(has_family):
         if has_family:
             print("\n2. Get your wife to help you open the door.")
         
-        elif 1 in inventory:
+        elif 0 in inventory:
             print("\n2. Try prying it open with your trusty crowbar.")
         
         ans = input("\n\n")
@@ -604,7 +604,7 @@ def mil_base(has_family):
             os.system(clear_cmd)
             pass
 
-            if has_family == False and 1 not in inventory:
+            if has_family == False and 0 not in inventory:
                 print("\nAnd, with no other option, you have no choice but to go back. However, going up the stairs reveals that an explosion has caused rubble to block the stairway. You are now completely isolated from civilization.\nYou eventually die, hungry and alone. Your family would also perish by themselves.\n\nThe game will now close.")
                 input("\nPress any key to continue.")
                 os.system(clear_cmd)
