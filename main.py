@@ -61,7 +61,6 @@ def item_drop():
     if ans in inventory:
         print("Dropped " + items[ans]["name"])
         inventory.remove(ans)
-        print(inventory)
         return ans
     else:
         print("This item is not in your inventory")
@@ -124,7 +123,7 @@ def kitchen():
 
         while ans2 != "1" or ans2 != "2":
             if ans2 == "1":
-                if len(inventory) == 5:
+                if len(inventory) >= 5:
                     item_drop()
                 inventory.append(1)  # Add the knife to inventory
                 print("\nYou feel the cold steel of the handle as you put it away.you check around the kitchen, looking under the tables making sure to look in every nook and cranny. They are not here. You return back to the hallway, knife sitting in your pocket")
@@ -160,7 +159,7 @@ def garage():
             ans7 = input("What do you do? ")
 
             if ans7 == "1":
-                if len(inventory) == 5:
+                if len(inventory) >= 5:
                     item_drop()
                 inventory.append(6)
                 print("\nYou take the Rope and continue searching.")
@@ -183,16 +182,16 @@ def garage():
             ans6 = input("What do you do? ")
 
             if ans6 == "1":
-                if len(inventory) == 5:
+                if len(inventory) >= 5:
                     item_drop()
                 inventory.append(7)
-                print("\nYou take the Torch and head back to the corridoor")
+                print("\nYou take the Torch and head back to the corridor")
                 input("\nPress any key to continue.")
                 os.system(clear_cmd)
                 break
 
             elif ans6 == "2":
-                print("\nYou leave the Torch and head back to the corridoor.")
+                print("\nYou leave the Torch and head back to the corridor.")
                 input("\nPress any key to continue.")
                 os.system(clear_cmd)
                 break
@@ -244,7 +243,7 @@ def bathroom():
             ans4 = input()
 
             if ans4 =="1":
-                if len(inventory) == 5:
+                if len(inventory) >= 5:
                     item_drop()
                 print("\nYou pick up the duck, it quacks softly")
                 inventory.append(3)
@@ -275,9 +274,8 @@ def bathroom():
         ans8 = input()
 
         if ans8 =="1":
-            if len(inventory) == 5:
+            if len(inventory) >= 5:
                 item_drop()
-                continue
             print("\nThis'll be inconvienient to carry but it might come in handy.")
             inventory.append(2)
             input("\nPress any key to continue.")
@@ -430,12 +428,10 @@ def fields(family):
     print("You've not been walking long, maybe 15 minutes, when you come across a field.")
     input("\nPress any key to continue.")
     os.system(clear_cmd)
-    print("The field is bright green with specs of other colours. It's serene and calm compared to earlier, but you shouldnt let your gaurd down.")
+    print("The field is bright green with specs of other colours. It's serene and calm.")
     input("\nPress any key to continue.")
     os.system(clear_cmd)
     print("There's no one in the field.")
-    input("\nPress any key to continue.")
-    os.system(clear_cmd)
     if family:
         print("Just you, and your family, keeping each other safe, knowing that your family are okay eases your nerves.")
         input("\nPress any key to continue.")
@@ -445,7 +441,7 @@ def fields(family):
         input("\nPress any key to continue.")
         os.system(clear_cmd)
 
-    print("There's a few birds, but they're dead silent, not helping your anxiousnes.")
+    print("There's a few birds, but they're dead silent.")
     input("\nPress any key to continue.")
     os.system(clear_cmd)
     print("It's as if they're aware and of the danger and they're scared.")
@@ -455,7 +451,7 @@ def fields(family):
         print("Despite the fact you've not been walking long, Chelsea and Amber are complaining their legs hurt.")
         input("\nPress any key to continue.")
         os.system(clear_cmd)
-        print("You decide to take a break, and sit down in the field, but not for long, it reminds you of when you used to go on picnics,though you knew if you stayed long you would end up the picnic.")
+        print("You decide to take a break, and sit down in the field, but not for long.")
         input("\nPress any key to continue.")
         os.system(clear_cmd)
         print("You're sat there for around 2 minutes, quiet talking in an attempt to calm them down.")
@@ -468,22 +464,20 @@ def fields(family):
         input("\nPress any key to continue.")
         os.system(clear_cmd)
     else:
-        print("The field is empty, most people are running in the roads and in the streets, aimlessly running in circles like headless chickens.")
+        print("The field is empty, most people are running in the roads and in the streets, aimlessly")
         input("\nPress any key to continue.")
         os.system(clear_cmd)
 
     print("The fields feel safe, but you must keep your guard up, nowhere is safe when there's these creatures flooding the streets")
     input("\nPress any key to continue.")
     os.system(clear_cmd)
-    print("Anything could appear, you have to stay aware of your surroundings, you keep your family close and reasure them that they will be okay.")
+    print("Anything could appear, you have to stay aware of your surroundings")
     input("\nPress any key to continue.")
     os.system(clear_cmd)
-    print("You come accross a massive patch of mud. It would demoralise everyone if you went through")
+    print("You come accross a massive patch of mud.")
     input("\nPress any key to continue.")
     os.system(clear_cmd)
     print("There's a path that goes around, but that could add another 15-20 minutes to your journey")
-    input("\nPress any key to continue.")
-    os.system(clear_cmd)
     print("You have to decide whether to go around it or go through it.")
     input("\nPress any key to continue.")
     os.system(clear_cmd)
@@ -491,52 +485,40 @@ def fields(family):
         print("Both Chelsea and Amber are urging you to go around,")
         input("\nPress any key to continue.")
         os.system(clear_cmd)
-        print("but your wife trusts your decision will be best.")
+        print("But your wife trusts your decision will be best.")
         input("\nPress any key to continue.")
         os.system(clear_cmd)
     while True:
-        print("Will you go through the mud?")
-        ans = input("Y- Yes \nN- No \n\n").upper()
-        if ans == "Y":
+        print("What do you do?")
+        ans = input("1. Go through the mud \n2. Go around the mud \n\n")
+        if ans == "1":
             system(clear_cmd)
             print("You go through the mud")
             input("\nPress any key to continue.")
             os.system(clear_cmd)
             print("It's deeper than you thought.")
-            input("\nPress any key to continue.")
-            os.system(clear_cmd)
             print("Your entire feet and ankles are submerged.")
-            input("\nPress any key to continue.")
-            os.system(clear_cmd)
             if family:
-                print("Not being very tall, it comes up halfway up the bottom of your daughter's legs")
-                input("\nPress any key to continue.")
-                os.system(clear_cmd)
-                print("They are *not* happy about it.")
-                input("\nPress any key to continue.")
-                os.system(clear_cmd)
-            print("You get through the mud but you are now covered in mud.")
+                print("Not being very tall, it comes up halfway up the bottom of your daughters' legs.")
+                print("They are not happy about it.")
+            print("You get through the it successfully but you are now incredibly dirty.")
             input("\nPress any key to continue.")
             os.system(clear_cmd)
             break
-        elif ans == "N":
+        elif ans == "2":
             system(clear_cmd)
             print("You go around the mud.")
             input("\nPress any key to continue.")
             os.system(clear_cmd)
             if family:
                 print("Amber and Chelsea's mood seems to have lifted")
-                input("\nPress any key to continue.")
-                os.system(clear_cmd)
                 print("They really didn't want to go through that mud")
-                input("\nPress any key to continue.")
-                os.system(clear_cmd)
             print("You may have stayed clean and dry but added 20 minutes to your journey")
             input("\nPress any key to continue.")
             os.system(clear_cmd)
             break
         else:
-            print("\nInvalid Input")
+            print("Invalid Input\n")
 
     print("You walk for a little while longer until something catches your eye, it's silver and shiny")
     input("\nPress any key to continue.")
@@ -548,12 +530,11 @@ def fields(family):
         
         ans = input()
         if ans == "1":
-            if len(inventory) == 5:
+            if len(inventory) >= 5:
                 item_drop()
-                continue
             system(clear_cmd)
             print("You take the crowbar, it could come in handy.")
-            inventory.append(1)
+            inventory.append(0)
             input("\nPress any key to continue.")
             os.system(clear_cmd)
             break
@@ -564,7 +545,7 @@ def fields(family):
             os.system(clear_cmd)
             break
         else:
-            print("Invalid input")
+            print("\nInvalid input")
     print("You continue walking for about 30 minutes until you spot your destination up ahead")
     input("\nPress any key to continue.")
     os.system(clear_cmd)
@@ -577,9 +558,8 @@ def mil_base(has_family):
         ans = input("\n")
         
         if ans == "1":
-            if len(inventory) == 5:
+            if len(inventory) >= 5:
                 item_drop()
-                continue
             print("\nA fowl stench assaults your nose. From his body, you obtain a keycard. Something bugs you, however: The guard has only died recently. How has his body rotten this badly?\nYou brush it off and move on. As you leave, you feel like you saw the body twitch.")
             input("\nPress any key to continue.")
             os.system(clear_cmd)
@@ -706,19 +686,17 @@ def mil_base(has_family):
         #family dies at cryo-pod ending
     
 
-# def main():
-#     title()
-#     tutorial()
-#     family = airport()
-#     if family:
-#         stay, inventory = house() 
-#         if stay:
-#             exit()
-#     road_block(family)
-#     inventory = fields(family)
-#     mil_base(family) 
+def main():
+    title()
+    tutorial()
+    family = airport()
+    if family:
+        stay, inventory = house() 
+        if stay:
+            exit()
+    road_block(family)
+    inventory = fields(family)
+    mil_base(family) 
     
-# if __name__ == "__main__":
-#     main()
-
-mil_base(True)
+if __name__ == "__main__":
+    main()
