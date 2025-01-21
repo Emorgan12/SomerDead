@@ -693,7 +693,7 @@ def main():
     if family:
         stay, inventory = house() 
         if stay:
-            exit()
+            quit()
     road_block(family)
     inventory = fields(family)
     mil_base(family) 
